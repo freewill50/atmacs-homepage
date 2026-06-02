@@ -1224,9 +1224,7 @@ html[lang="en"] .phil-intro p {
 .td-scope { font-size: .76rem; color: var(--muted); margin-top: .12rem; word-break: keep-all; }
 .td-badge { display: inline-block; font-size: .66rem; padding: .18rem .55rem; border: 1px solid var(--border); border-radius: 4px; color: var(--accent); font-weight: 700; white-space: nowrap; }
 .td-cl { font-size: .82rem; }
-.td-pd { font-size: .79rem; color: var(--muted); white-space: nowrap; }
 .td-sc { font-size: .79rem; color: var(--muted); }
-.td-yr { color: var(--accent); font-weight: 700; font-size: .87rem; white-space: nowrap; }
 
 /* ── 기술력 ── */
 .tech-sec { background: var(--bg2); }
@@ -1547,9 +1545,6 @@ footer {
   .tech-vis { grid-template-columns: repeat(2, 1fr); }
   .tv-box:nth-child(1) { grid-column: span 2; }
   .proc-steps { grid-template-columns: repeat(2, 1fr); }
-
-  /* 실적 테이블: 수행기간 컬럼 숨김 */
-  .perf-table th:nth-child(4), .perf-table td:nth-child(4) { display: none; }
 }
 
 /* 800px 이하 추가 */
@@ -1617,9 +1612,6 @@ footer {
   .footer-grid { grid-template-columns: 1fr; }
   .fb { grid-column: span 1; }
   .footer-btm { flex-direction: column; gap: .5rem; text-align: center; }
-
-  /* 실적 테이블: 추가 컬럼 숨김 */
-  .perf-table th:nth-child(5), .perf-table td:nth-child(5) { display: none; }
 }
 
 /* 360px 이하 (소형 모바일) */
@@ -2472,7 +2464,7 @@ function switchOffice(office) {
 <!-- KEY SITE GALLERY (주요 현장 갤러리) -->
 <section class="ksg-sec" id="key-sites" aria-label="주요 현장 갤러리">
   <div class="ksg-grid">
-    <a href="#case-studies" class="ksg-tile">
+    <a href="#services" class="ksg-tile">
       <picture>
         <source type="image/webp" srcset="images/site/hero-2arch-tunnel-640w.webp 640w, images/site/hero-2arch-tunnel-1200w.webp 1200w, images/site/hero-2arch-tunnel-1920w.webp 1920w" sizes="(max-width:900px) 50vw, 25vw">
         <img src="images/site/hero-2arch-tunnel-1920w.jpg" alt="2-Arch 터널 내부 계측 현장" loading="lazy" decoding="async">
@@ -2482,7 +2474,7 @@ function switchOffice(office) {
         <span class="ksg-name" data-i18n="ksg.t1.name">2-Arch 터널 계측</span>
       </div>
     </a>
-    <a href="#case-studies" class="ksg-tile">
+    <a href="#services" class="ksg-tile">
       <picture>
         <source type="image/webp" srcset="images/site/hero-noryang-bridge-640w.webp 640w, images/site/hero-noryang-bridge-1200w.webp 1200w, images/site/hero-noryang-bridge-1920w.webp 1920w" sizes="(max-width:900px) 50vw, 25vw">
         <img src="images/site/hero-noryang-bridge-1920w.jpg" alt="노량대교 현수교 시공 계측 현장" loading="lazy" decoding="async">
@@ -2492,7 +2484,7 @@ function switchOffice(office) {
         <span class="ksg-name" data-i18n="ksg.t2.name">현수교 시공 계측</span>
       </div>
     </a>
-    <a href="#case-studies" class="ksg-tile">
+    <a href="#services" class="ksg-tile">
       <picture>
         <source type="image/webp" srcset="images/site/hero-lng-terminal-640w.webp 640w, images/site/hero-lng-terminal-1200w.webp 1200w, images/site/hero-lng-terminal-1920w.webp 1920w" sizes="(max-width:900px) 50vw, 25vw">
         <img src="images/site/hero-lng-terminal-1920w.jpg" alt="LNG 터미널 탱크 침하 계측 현장" loading="lazy" decoding="async">
@@ -2502,14 +2494,14 @@ function switchOffice(office) {
         <span class="ksg-name" data-i18n="ksg.t3.name">LNG 탱크 침하계측</span>
       </div>
     </a>
-    <a href="#case-studies" class="ksg-tile">
+    <a href="#services" class="ksg-tile">
       <picture>
-        <source type="image/webp" srcset="images/site/hero-cable-bridge-640w.webp 640w, images/site/hero-cable-bridge-1200w.webp 1200w, images/site/hero-cable-bridge-1920w.webp 1920w" sizes="(max-width:900px) 50vw, 25vw">
-        <img src="images/site/hero-cable-bridge-1920w.jpg" alt="사장교 케이블 모니터링 현장" loading="lazy" decoding="async">
+        <source type="image/webp" srcset="images/site/case-busan-port-640w.webp 640w, images/site/case-busan-port-1200w.webp 1200w" sizes="(max-width:900px) 50vw, 25vw">
+        <img src="images/site/case-busan-port-1200w.jpg" alt="부산항 신항 컨테이너 야드 항공 사진" loading="lazy" decoding="async">
       </picture>
       <div class="ksg-cap">
-        <span class="ksg-tag" data-i18n="ksg.t4.tag">교량 유지관리</span>
-        <span class="ksg-name" data-i18n="ksg.t4.name">사장교 케이블 모니터링</span>
+        <span class="ksg-tag" data-i18n="ksg.t4.tag">항만·해양</span>
+        <span class="ksg-name" data-i18n="ksg.t4.name">항만 구조물 계측</span>
       </div>
     </a>
   </div>
@@ -2568,8 +2560,8 @@ function switchOffice(office) {
             <div class="co-kpi-lbl" data-i18n="kpi.founded">창립 연도</div>
           </div>
           <div class="co-kpi-card">
-            <div class="co-kpi-num" data-i18n="kpi.exp.num">20<span style="font-size:.85rem;font-weight:600">년+</span></div>
-            <div class="co-kpi-lbl" data-i18n="kpi.exp">계측 전문 경력</div>
+            <div class="co-kpi-num" style="font-size:1.25rem;" data-i18n="kpi.platform.num">Geowebs<br><span style="font-size:.7rem;font-weight:600;color:#7c3aed;letter-spacing:.02em;">AI 모니터링 플랫폼</span></div>
+            <div class="co-kpi-lbl" data-i18n="kpi.platform">자체 개발 플랫폼</div>
           </div>
           <div class="co-kpi-card">
             <div class="co-kpi-num">1,000<span style="font-size:.85rem;font-weight:600">+</span></div>
@@ -2598,85 +2590,63 @@ function switchOffice(office) {
     <div class="about-tab-panel active" id="about-panel-org" role="tabpanel" aria-labelledby="atab-org">
       <div class="org-wrap">
       <div data-i18n="org.chart.wrap">
-      <svg class="org-svg" viewBox="0 0 1600 720" xmlns="http://www.w3.org/2000/svg" font-family="'Pretendard','Noto Sans KR',sans-serif">
+      <svg class="org-svg" viewBox="0 0 1600 560" xmlns="http://www.w3.org/2000/svg" font-family="'Pretendard','Noto Sans KR',sans-serif">
   <defs>
-    <filter id="os1" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#4D1254" flood-opacity=".25"/></filter>
-    <filter id="os2" x="-15%" y="-15%" width="130%" height="130%"><feDropShadow dx="0" dy="2" stdDeviation="5" flood-color="#4D1254" flood-opacity=".18"/></filter>
-    <linearGradient id="ceo-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4D1254"/><stop offset="100%" stop-color="#6B2180"/></linearGradient>
+    <filter id="os1" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="5" stdDeviation="10" flood-color="#4D1254" flood-opacity=".28"/></filter>
+    <filter id="os2" x="-15%" y="-15%" width="130%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#4D1254" flood-opacity=".22"/></filter>
+    <linearGradient id="ceo-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4D1254"/><stop offset="100%" stop-color="#7C2496"/></linearGradient>
+    <linearGradient id="staff-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#6A2298"/><stop offset="100%" stop-color="#8B2DB0"/></linearGradient>
+    <linearGradient id="div-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#5A2287"/><stop offset="100%" stop-color="#7C2496"/></linearGradient>
   </defs>
-  <line x1="800" y1="135" x2="800" y2="172" stroke="rgba(150,100,180,0.45)" stroke-width="2.5"/>
-  <line x1="120" y1="172" x2="1480" y2="172" stroke="rgba(150,100,180,0.45)" stroke-width="2.5"/>
-  <line x1="120" y1="172" x2="120" y2="222" stroke="rgba(150,100,180,0.45)" stroke-width="2.5"/>
-  <line x1="1480" y1="172" x2="1480" y2="222" stroke="rgba(150,100,180,0.45)" stroke-width="2.5"/>
-  <line x1="800" y1="172" x2="800" y2="352" stroke="rgba(150,100,180,0.45)" stroke-width="2.5"/>
-  <line x1="215" y1="352" x2="1340" y2="352" stroke="rgba(150,100,180,0.45)" stroke-width="2.5"/>
-  <line x1="215" y1="352" x2="215" y2="392" stroke="rgba(150,100,180,0.45)" stroke-width="2.5"/>
-  <line x1="575" y1="352" x2="575" y2="392" stroke="rgba(150,100,180,0.45)" stroke-width="2.5"/>
-  <line x1="935" y1="352" x2="935" y2="392" stroke="rgba(150,100,180,0.45)" stroke-width="2.5"/>
-  <line x1="1340" y1="352" x2="1340" y2="392" stroke="rgba(150,100,180,0.45)" stroke-width="2.5"/>
-  <line x1="215" y1="482" x2="215" y2="512" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="130" y1="512" x2="300" y2="512" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="130" y1="512" x2="130" y2="552" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="300" y1="512" x2="300" y2="552" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="575" y1="482" x2="575" y2="512" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="490" y1="512" x2="660" y2="512" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="490" y1="512" x2="490" y2="552" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="660" y1="512" x2="660" y2="552" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="935" y1="482" x2="935" y2="512" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="850" y1="512" x2="1020" y2="512" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="850" y1="512" x2="850" y2="552" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="1020" y1="512" x2="1020" y2="552" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="1340" y1="482" x2="1340" y2="512" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="1200" y1="512" x2="1480" y2="512" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="1200" y1="512" x2="1200" y2="552" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="1340" y1="512" x2="1340" y2="552" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="1480" y1="512" x2="1480" y2="552" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <rect x="570" y="22" width="460" height="113" rx="14" fill="url(#ceo-grad)" filter="url(#os1)"/>
-  <text x="800" y="70" text-anchor="middle" fill="white" font-size="32" font-weight="800">대표이사</text>
-  <text x="800" y="100" text-anchor="middle" fill="rgba(255,255,255,.82)" font-size="16">President &amp; CEO</text>
-  <rect x="20" y="222" width="200" height="83" rx="12" fill="#1A5E30" filter="url(#os2)"/>
-  <text x="120" y="258" text-anchor="middle" fill="white" font-size="19" font-weight="700">기술연구소</text>
-  <text x="120" y="282" text-anchor="middle" fill="rgba(255,255,255,.82)" font-size="12">R&amp;D Lab</text>
-  <rect x="1380" y="222" width="200" height="83" rx="12" fill="#5B1870" filter="url(#os2)"/>
-  <text x="1480" y="258" text-anchor="middle" fill="white" font-size="19" font-weight="700">안전품질실</text>
-  <text x="1480" y="282" text-anchor="middle" fill="rgba(255,255,255,.82)" font-size="12">Safety &amp; QC</text>
-  <rect x="90" y="392" width="250" height="90" rx="12" fill="#2E1B4E" filter="url(#os2)"/>
-  <text x="215" y="430" text-anchor="middle" fill="white" font-size="19" font-weight="700">경영관리실</text>
-  <text x="215" y="454" text-anchor="middle" fill="rgba(255,255,255,.78)" font-size="12">Management</text>
-  <rect x="450" y="392" width="250" height="90" rx="12" fill="#3B0F6B" filter="url(#os2)"/>
-  <text x="575" y="430" text-anchor="middle" fill="white" font-size="19" font-weight="700">조달기획실</text>
-  <text x="575" y="454" text-anchor="middle" fill="rgba(255,255,255,.78)" font-size="12">Procurement</text>
-  <rect x="810" y="392" width="250" height="90" rx="12" fill="#551B8A" filter="url(#os2)"/>
-  <text x="935" y="430" text-anchor="middle" fill="white" font-size="19" font-weight="700">기술영업부</text>
-  <text x="935" y="454" text-anchor="middle" fill="rgba(255,255,255,.78)" font-size="12">Tech Sales</text>
-  <rect x="1215" y="392" width="250" height="90" rx="12" fill="#7A1055" filter="url(#os2)"/>
-  <text x="1340" y="430" text-anchor="middle" fill="white" font-size="19" font-weight="700">계측ENG사업부</text>
-  <text x="1340" y="454" text-anchor="middle" fill="rgba(255,255,255,.78)" font-size="12">Monitoring Eng.</text>
-  <rect x="55" y="552" width="150" height="112" rx="10" fill="#3A2060" filter="url(#os2)"/>
-  <text x="130" y="600" text-anchor="middle" fill="white" font-size="16" font-weight="700">재경</text>
-  <text x="130" y="620" text-anchor="middle" fill="white" font-size="16" font-weight="700">회계</text>
-  <rect x="225" y="552" width="150" height="112" rx="10" fill="#3A2060" filter="url(#os2)"/>
-  <text x="300" y="600" text-anchor="middle" fill="white" font-size="16" font-weight="700">인사</text>
-  <text x="300" y="620" text-anchor="middle" fill="white" font-size="16" font-weight="700">총무</text>
-  <rect x="415" y="552" width="150" height="112" rx="10" fill="#4A1580" filter="url(#os2)"/>
-  <text x="490" y="600" text-anchor="middle" fill="white" font-size="16" font-weight="700">구매</text>
-  <text x="490" y="620" text-anchor="middle" fill="white" font-size="16" font-weight="700">관리</text>
-  <rect x="585" y="552" width="150" height="112" rx="10" fill="#4A1580" filter="url(#os2)"/>
-  <text x="660" y="600" text-anchor="middle" fill="white" font-size="16" font-weight="700">해외</text>
-  <text x="660" y="620" text-anchor="middle" fill="white" font-size="16" font-weight="700">자재</text>
-  <rect x="775" y="552" width="150" height="112" rx="10" fill="#6A2298" filter="url(#os2)"/>
-  <text x="850" y="600" text-anchor="middle" fill="white" font-size="16" font-weight="700">국내</text>
-  <text x="850" y="620" text-anchor="middle" fill="white" font-size="16" font-weight="700">영업</text>
-  <rect x="945" y="552" width="150" height="112" rx="10" fill="#6A2298" filter="url(#os2)"/>
-  <text x="1020" y="600" text-anchor="middle" fill="white" font-size="16" font-weight="700">해외</text>
-  <text x="1020" y="620" text-anchor="middle" fill="white" font-size="16" font-weight="700">영업</text>
-  <rect x="1140" y="552" width="120" height="112" rx="10" fill="#8C1365" filter="url(#os2)"/>
-  <text x="1200" y="614" text-anchor="middle" fill="white" font-size="16" font-weight="700">지반부</text>
-  <rect x="1280" y="552" width="120" height="112" rx="10" fill="#8C1365" filter="url(#os2)"/>
-  <text x="1340" y="600" text-anchor="middle" fill="white" font-size="16" font-weight="700">영남</text>
-  <text x="1340" y="620" text-anchor="middle" fill="white" font-size="16" font-weight="700">지사</text>
-  <rect x="1420" y="552" width="120" height="112" rx="10" fill="#8C1365" filter="url(#os2)"/>
-  <text x="1480" y="614" text-anchor="middle" fill="white" font-size="16" font-weight="700">구조부</text>
+
+  <!-- Connector lines -->
+  <g stroke="rgba(124,36,150,0.45)" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <line x1="800" y1="135" x2="800" y2="210"/>
+    <line x1="310" y1="210" x2="1290" y2="210"/>
+    <line x1="800" y1="210" x2="800" y2="360"/>
+    <line x1="200" y1="360" x2="1400" y2="360"/>
+    <line x1="200" y1="360" x2="200" y2="400"/>
+    <line x1="600" y1="360" x2="600" y2="400"/>
+    <line x1="1000" y1="360" x2="1000" y2="400"/>
+    <line x1="1400" y1="360" x2="1400" y2="400"/>
+  </g>
+
+  <!-- 대표이사 / CEO -->
+  <rect x="620" y="25" width="360" height="110" rx="16" fill="url(#ceo-grad)" filter="url(#os1)"/>
+  <text x="800" y="78" text-anchor="middle" fill="white" font-size="30" font-weight="800" letter-spacing="2">대표이사</text>
+  <text x="800" y="110" text-anchor="middle" fill="rgba(255,255,255,.85)" font-size="14" font-weight="500" letter-spacing="2.5">President &amp; CEO</text>
+
+  <!-- 기술연구소 -->
+  <rect x="80" y="170" width="230" height="80" rx="12" fill="url(#staff-grad)" filter="url(#os2)"/>
+  <text x="195" y="207" text-anchor="middle" fill="white" font-size="19" font-weight="700">기술연구소</text>
+  <text x="195" y="230" text-anchor="middle" fill="rgba(255,255,255,.85)" font-size="11" letter-spacing="0.6">Technical Research Institute</text>
+
+  <!-- 안전품질실 -->
+  <rect x="1290" y="170" width="230" height="80" rx="12" fill="url(#staff-grad)" filter="url(#os2)"/>
+  <text x="1405" y="207" text-anchor="middle" fill="white" font-size="19" font-weight="700">안전품질실</text>
+  <text x="1405" y="230" text-anchor="middle" fill="rgba(255,255,255,.85)" font-size="11" letter-spacing="0.6">Safety / Quality Office</text>
+
+  <!-- 경영관리실 -->
+  <rect x="70" y="400" width="260" height="120" rx="12" fill="url(#div-grad)" filter="url(#os2)"/>
+  <text x="200" y="450" text-anchor="middle" fill="white" font-size="20" font-weight="700">경영관리실</text>
+  <text x="200" y="483" text-anchor="middle" fill="rgba(255,255,255,.85)" font-size="11" letter-spacing="0.6">Business</text>
+  <text x="200" y="502" text-anchor="middle" fill="rgba(255,255,255,.85)" font-size="11" letter-spacing="0.6">Administration Office</text>
+
+  <!-- 마케팅 사업본부 -->
+  <rect x="470" y="400" width="260" height="120" rx="12" fill="url(#div-grad)" filter="url(#os2)"/>
+  <text x="600" y="455" text-anchor="middle" fill="white" font-size="20" font-weight="700">마케팅 사업본부</text>
+  <text x="600" y="492" text-anchor="middle" fill="rgba(255,255,255,.85)" font-size="11" letter-spacing="0.6">Marketing Office</text>
+
+  <!-- 계측 엔지니어링 사업본부 -->
+  <rect x="870" y="400" width="260" height="120" rx="12" fill="url(#div-grad)" filter="url(#os2)"/>
+  <text x="1000" y="442" text-anchor="middle" fill="white" font-size="18" font-weight="700">계측 엔지니어링</text>
+  <text x="1000" y="468" text-anchor="middle" fill="white" font-size="18" font-weight="700">사업본부</text>
+  <text x="1000" y="500" text-anchor="middle" fill="rgba(255,255,255,.85)" font-size="11" letter-spacing="0.6">Engineering Office</text>
+
+  <!-- 영남 사업본부 -->
+  <rect x="1270" y="400" width="260" height="120" rx="12" fill="url(#div-grad)" filter="url(#os2)"/>
+  <text x="1400" y="455" text-anchor="middle" fill="white" font-size="20" font-weight="700">영남 사업본부</text>
+  <text x="1400" y="492" text-anchor="middle" fill="rgba(255,255,255,.85)" font-size="11" letter-spacing="0.6">Youngnam Office</text>
 </svg>
       </div>
     </div>
@@ -2848,7 +2818,7 @@ function switchOffice(office) {
     <div class="phil-3col">
       <div class="p3 why">
         <div class="p3-tag" data-i18n="phil.why.tag">Why — 왜 계측하는가</div>
-        <h3 data-i18n="phil.why.h3">불확실한 지반을 안전한 판단으로 전환합니다</h3>
+        <h3 data-i18n="phil.why.h3">보이지 않는 위험을 측정 가능한 수치로 만듭니다</h3>
         <p class="phil-sum" data-i18n="phil.why.sum">보이지 않는 위험을 수치화하고, 설계 가정과 실제 거동의 차이를 검증합니다.</p>
         <button class="phil-toggle" id="phil-btn-why" onclick="togglePhil('why')">
           <span class="phi-lbl" data-i18n="phil.toggle.more">자세히 보기 ▾</span>
@@ -2869,7 +2839,7 @@ function switchOffice(office) {
       </div>
       <div class="p3 what">
         <div class="p3-tag" data-i18n="phil.what.tag">What — 무엇을 계측하는가</div>
-        <h3 data-i18n="phil.what.h3">현장 거동을 설명하는 핵심 변수를 계측합니다</h3>
+        <h3 data-i18n="phil.what.h3">지반·구조물·환경의 핵심 응답을 계측합니다</h3>
         <p class="phil-sum" data-i18n="phil.what.sum">변위·하중·응력·지하수·균열·동적 거동 등 6대 핵심 변수를 종합 계측합니다.</p>
         <button class="phil-toggle" id="phil-btn-what" onclick="togglePhil('what')">
           <span class="phi-lbl" data-i18n="phil.toggle.more">자세히 보기 ▾</span>
@@ -2891,7 +2861,7 @@ function switchOffice(office) {
       </div>
       <div class="p3 how">
         <div class="p3-tag" data-i18n="phil.how.tag">How — 어떻게 계측하는가</div>
-        <h3 data-i18n="phil.how.h3">질문을 정하고, 정확히 측정하며, 투명하게 해석합니다</h3>
+        <h3 data-i18n="phil.how.h3">센서·플랫폼·AI·전문가의 결합으로 24시간 작동합니다</h3>
         <p class="phil-sum" data-i18n="phil.how.sum">목적 정의 → 정밀 측정 → 투명한 해석, 단계별 검증 기반으로 현장을 지원합니다.</p>
         <button class="phil-toggle" id="phil-btn-how" onclick="togglePhil('how')">
           <span class="phi-lbl" data-i18n="phil.toggle.more">자세히 보기 ▾</span>
@@ -3754,201 +3724,13 @@ document.addEventListener('DOMContentLoaded',function(){selectBiz('c1');});
             <div class="fg-brand-badge">坂田電機<br><span style="font-size:.62rem;font-weight:400;">Sakata Denki</span></div>
           </div>
           <div class="fg-card-body">
-            <!-- 지중무선통신 개념 SVG — 해상매립/대수심 시나리오 -->
+            <!-- 지중무선통신 개념 일러스트 -->
             <div class="fg-img-wrap">
-              <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" class="fg-svg"
-                   style="width:100%;max-width:760px;display:block;margin:0 auto;border-radius:12px;overflow:visible;">
-                <defs>
-                  <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%"   stop-color="#06101e"/>
-                    <stop offset="100%" stop-color="#0c1f36"/>
-                  </linearGradient>
-                  <linearGradient id="seaGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%"   stop-color="#0d3355"/>
-                    <stop offset="100%" stop-color="#071e35"/>
-                  </linearGradient>
-                  <linearGradient id="clay1Grad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%"   stop-color="#2a1a0e"/>
-                    <stop offset="100%" stop-color="#3d2510"/>
-                  </linearGradient>
-                  <linearGradient id="clay2Grad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%"   stop-color="#3d2510"/>
-                    <stop offset="100%" stop-color="#4a2e14"/>
-                  </linearGradient>
-                  <linearGradient id="sandGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%"   stop-color="#4a3520"/>
-                    <stop offset="100%" stop-color="#5a4228"/>
-                  </linearGradient>
-                  <filter id="glow">
-                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-                    <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                  </filter>
-                  <filter id="shadow">
-                    <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity=".4"/>
-                  </filter>
-                </defs>
-
-                <!-- ══ 배경 영역 ══ -->
-                <!-- 하늘/공기 -->
-                <rect x="0" y="0" width="760" height="80" fill="url(#skyGrad)"/>
-                <!-- 해수 -->
-                <rect x="0" y="80" width="760" height="80" fill="url(#seaGrad)"/>
-                <!-- 연약점토 1층 (Soft Clay Layer 1) -->
-                <rect x="0" y="160" width="760" height="90" fill="url(#clay1Grad)"/>
-                <!-- 사선 해칭 Layer 1 -->
-                <line x1="0" y1="185" x2="760" y2="185" stroke="#5a3b1a" stroke-width="0.8" opacity=".4"/>
-                <line x1="0" y1="210" x2="760" y2="210" stroke="#5a3b1a" stroke-width="0.8" opacity=".4"/>
-                <line x1="0" y1="235" x2="760" y2="235" stroke="#5a3b1a" stroke-width="0.8" opacity=".4"/>
-                <!-- 연약점토 2층 (Soft Clay Layer 2) -->
-                <rect x="0" y="250" width="760" height="90" fill="url(#clay2Grad)"/>
-                <line x1="0" y1="270" x2="760" y2="270" stroke="#6b4420" stroke-width="0.8" opacity=".4"/>
-                <line x1="0" y1="295" x2="760" y2="295" stroke="#6b4420" stroke-width="0.8" opacity=".4"/>
-                <line x1="0" y1="320" x2="760" y2="320" stroke="#6b4420" stroke-width="0.8" opacity=".4"/>
-                <!-- 모래층 -->
-                <rect x="0" y="340" width="760" height="60" fill="url(#sandGrad)"/>
-                <line x1="0" y1="358" x2="760" y2="358" stroke="#7a5a30" stroke-width="0.8" opacity=".4"/>
-                <line x1="0" y1="375" x2="760" y2="375" stroke="#7a5a30" stroke-width="0.8" opacity=".4"/>
-
-                <!-- ══ 경계선 ══ -->
-                <!-- 해수면 -->
-                <rect x="0" y="78" width="760" height="4" fill="#1a6aaa" opacity=".8"/>
-                <!-- 해저면 / 지표면 -->
-                <rect x="0" y="158" width="760" height="4" fill="#5a3b1a" opacity=".9"/>
-                <!-- 층 경계 1↔2 -->
-                <rect x="0" y="248" width="760" height="3" fill="#6b4420" opacity=".7"/>
-                <!-- 층 경계 2↔모래 -->
-                <rect x="0" y="338" width="760" height="3" fill="#7a5a30" opacity=".7"/>
-
-                <!-- ══ 지층 라벨 ══ -->
-                <text x="12" y="98"  fill="#5aacdf" font-size="10.5" font-weight="600" font-family="'Pretendard','Noto Sans KR',sans-serif" opacity=".9">해수 (Sea Water)</text>
-                <text x="12" y="200" fill="#c8a080" font-size="10.5" font-weight="600" font-family="'Pretendard','Noto Sans KR',sans-serif" opacity=".85">연약점토층 1 (Soft Clay Layer 1)</text>
-                <text x="12" y="292" fill="#d0a868" font-size="10.5" font-weight="600" font-family="'Pretendard','Noto Sans KR',sans-serif" opacity=".85">연약점토층 2 (Soft Clay Layer 2)</text>
-                <text x="12" y="375" fill="#d4b880" font-size="10.5" font-weight="600" font-family="'Pretendard','Noto Sans KR',sans-serif" opacity=".85">모래층 (Sand Layer)</text>
-
-                <!-- ══ 깊이 스케일 (우측) ══ -->
-                <line x1="732" y1="80"  x2="732" y2="340" stroke="#7a5a8a" stroke-width="1.2" opacity=".7"/>
-                <line x1="728" y1="80"  x2="736" y2="80"  stroke="#7a5a8a" stroke-width="1.2" opacity=".7"/>
-                <line x1="728" y1="340" x2="736" y2="340" stroke="#7a5a8a" stroke-width="1.2" opacity=".7"/>
-                <!-- 화살표 위 -->
-                <polygon points="732,76 729,84 735,84" fill="#7a5a8a" opacity=".8"/>
-                <!-- 화살표 아래 -->
-                <polygon points="732,344 729,336 735,336" fill="#7a5a8a" opacity=".8"/>
-                <text x="748" y="215" text-anchor="middle" fill="#b090c0" font-size="10" font-family="'Pretendard','Noto Sans KR',sans-serif"
-                      transform="rotate(90,748,215)">최대 40~100m 심도</text>
-                <!-- 해저면 표식 -->
-                <text x="742" y="162" fill="#9a7aaa" font-size="8.5" font-family="'Pretendard','Noto Sans KR',sans-serif" opacity=".7">해저면</text>
-
-                <!-- ══ 수집기 (Collector) — 우상단 해상 플랫폼 ══ -->
-                <!-- 플랫폼 선체 -->
-                <rect x="570" y="48" width="150" height="36" rx="6" fill="#1a3a5c" stroke="#2a6aaa" stroke-width="1.5" filter="url(#shadow)"/>
-                <rect x="570" y="48" width="150" height="5"  rx="3" fill="#2a6aaa" opacity=".7"/>
-                <text x="645" y="65" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="700" font-family="'Pretendard','Noto Sans KR',sans-serif">지중무선 수집기</text>
-                <text x="645" y="77" text-anchor="middle" fill="#8abcdc" font-size="8.5" font-family="'Pretendard','Noto Sans KR',sans-serif">Surface Data Collector</text>
-                <!-- 안테나 마스트 -->
-                <rect x="640" y="20" width="3" height="30" fill="#aaccee"/>
-                <!-- 안테나 표시 -->
-                <line x1="630" y1="24" x2="643" y2="30" stroke="#aaccee" stroke-width="1.5"/>
-                <line x1="655" y1="24" x2="643" y2="30" stroke="#aaccee" stroke-width="1.5"/>
-                <text x="645" y="17" text-anchor="middle" fill="#aaccee" font-size="8.5" font-family="'Pretendard','Noto Sans KR',sans-serif">📡 LTE 안테나</text>
-
-                <!-- ══ 지중 안테나 (Ground Antenna) ══ -->
-                <!-- 수집기에서 해저로 내려가는 케이블 -->
-                <line x1="645" y1="84" x2="645" y2="162" stroke="#2a8aee" stroke-width="2" stroke-dasharray="5,4" opacity=".7"/>
-                <!-- 지중 안테나 심볼 -->
-                <ellipse cx="645" cy="170" rx="18" ry="10" fill="#0d2040" stroke="#2a8aee" stroke-width="2" filter="url(#glow)"/>
-                <text x="645" y="174" text-anchor="middle" fill="#8acce8" font-size="8" font-weight="700" font-family="Arial">ANT</text>
-                <text x="645" y="188" text-anchor="middle" fill="#6aaad0" font-size="8.5" font-family="'Pretendard','Noto Sans KR',sans-serif">지중 안테나</text>
-
-                <!-- ══ 자기장 파동 (Magnetic Field Waves 10~100Hz) ══ -->
-                <!-- 수집기 안테나에서 지중 센서로 퍼지는 자기장 -->
-                <!-- Arc 1 (가장 작은) -->
-                <path d="M 540 170 Q 590 210 640 250" stroke="#ff6633" stroke-width="1.2" fill="none" stroke-dasharray="8,5" opacity=".35"/>
-                <!-- Arc 2 -->
-                <path d="M 490 170 Q 565 240 640 310" stroke="#ff6633" stroke-width="1.5" fill="none" stroke-dasharray="8,5" opacity=".45"/>
-                <!-- Arc 3 (중간) -->
-                <path d="M 430 168 Q 535 270 640 340" stroke="#ff6633" stroke-width="1.8" fill="none" stroke-dasharray="9,5" opacity=".50"/>
-                <!-- Arc 4 -->
-                <path d="M 370 165 Q 500 300 640 370" stroke="#ff6633" stroke-width="2.0" fill="none" stroke-dasharray="9,5" opacity=".55"/>
-                <!-- Arc 5 (가장 큰) -->
-                <path d="M 300 160 Q 460 325 640 390" stroke="#ff8855" stroke-width="2.2" fill="none" stroke-dasharray="10,5" opacity=".45"/>
-
-                <!-- 자기장 라벨 -->
-                <rect x="430" y="116" width="160" height="36" rx="6" fill="rgba(30,10,40,0.82)" stroke="#ff6633" stroke-width="1.2"/>
-                <text x="510" y="131" text-anchor="middle" fill="#ff8855" font-size="11" font-weight="700" font-family="'Pretendard','Noto Sans KR',sans-serif">저주파 자기장 10~100Hz</text>
-                <text x="510" y="145" text-anchor="middle" fill="#ddbbcc" font-size="9" font-family="'Pretendard','Noto Sans KR',sans-serif">흙 · 암반 · 해수 투과 → 40~100m 통신</text>
-                <!-- 화살표 라벨 → arc -->
-                <line x1="430" y1="152" x2="465" y2="168" stroke="#ff6633" stroke-width="1" opacity=".6"/>
-
-                <!-- ══ 비교: 기존 케이블 vs 지중무선 ══ -->
-                <rect x="8" y="8" width="196" height="68" rx="7" fill="rgba(10,18,35,0.85)" stroke="#4a2a6a" stroke-width="1.2"/>
-                <text x="106" y="24" text-anchor="middle" fill="#c8a8e0" font-size="9.5" font-weight="700" font-family="'Pretendard','Noto Sans KR',sans-serif">기존 케이블 방식 vs 지중무선</text>
-                <text x="16" y="38" fill="#ff6655" font-size="9.5" font-family="'Pretendard','Noto Sans KR',sans-serif">✗ 케이블 — 성토 시 단선 위험</text>
-                <text x="16" y="52" fill="#ff6655" font-size="9.5" font-family="'Pretendard','Noto Sans KR',sans-serif">✗ WiFi/LoRa — 지중 불통</text>
-                <text x="16" y="66" fill="#44dd88" font-size="9.5" font-weight="700" font-family="'Pretendard','Noto Sans KR',sans-serif">✓ 자기장 — 해수·흙·암반 투과</text>
-
-                <!-- ══ DABROS 클라우드 ══ -->
-                <!-- LTE 점선 -->
-                <path d="M 570 42 Q 450 15 350 30" stroke="#8844cc" stroke-width="1.8" fill="none" stroke-dasharray="7,4" opacity=".8"/>
-                <polygon points="353,26 345,32 355,36" fill="#8844cc" opacity=".8"/>
-                <!-- 클라우드 박스 -->
-                <rect x="220" y="12" width="125" height="42" rx="8" fill="rgba(40,10,60,0.90)" stroke="#8844cc" stroke-width="1.5" filter="url(#shadow)"/>
-                <rect x="220" y="12" width="125" height="5"  rx="3" fill="#8844cc" opacity=".6"/>
-                <text x="282" y="30" text-anchor="middle" fill="#cc88ff" font-size="12" font-weight="700" font-family="'Pretendard','Noto Sans KR',sans-serif">☁ DABROS</text>
-                <text x="282" y="45" text-anchor="middle" fill="#aa77dd" font-size="9" font-family="'Pretendard','Noto Sans KR',sans-serif">클라우드 계측 관제 플랫폼</text>
-                <!-- LTE 라벨 -->
-                <text x="462" y="10" text-anchor="middle" fill="#9966cc" font-size="9" font-family="'Pretendard','Noto Sans KR',sans-serif">LTE 무선 전송</text>
-
-                <!-- ══ 센서 노드 1: TR-044 수압식 침하계 ══ -->
-                <!-- y=210, x=200 (연약점토 1층) -->
-                <rect x="145" y="198" width="108" height="46" rx="8" fill="#1a0a28" stroke="#9944cc" stroke-width="2" filter="url(#shadow)"/>
-                <rect x="145" y="198" width="108" height="5" rx="3" fill="#9944cc" opacity=".7"/>
-                <text x="199" y="215" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700" font-family="Arial">TR-044</text>
-                <text x="199" y="228" text-anchor="middle" fill="#cc99ee" font-size="9"   font-family="'Pretendard','Noto Sans KR',sans-serif">수압식 침하계</text>
-                <text x="199" y="238" text-anchor="middle" fill="#9977aa" font-size="8"   font-family="'Pretendard','Noto Sans KR',sans-serif">Hydraulic Settlement</text>
-                <!-- 무선 신호 표시 -->
-                <path d="M 253 221 Q 400 205 540 185" stroke="#ff6633" stroke-width="1.5" fill="none" stroke-dasharray="5,4" opacity=".55"/>
-                <circle cx="253" cy="221" r="4" fill="#ff6633" opacity=".7"/>
-
-                <!-- ══ 센서 노드 2: ESP 층별침하계 ══ -->
-                <!-- y=290, x=350 (연약점토 2층) -->
-                <rect x="295" y="275" width="108" height="46" rx="8" fill="#1a0a28" stroke="#7744aa" stroke-width="2" filter="url(#shadow)"/>
-                <rect x="295" y="275" width="108" height="5" rx="3" fill="#7744aa" opacity=".7"/>
-                <text x="349" y="292" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700" font-family="Arial">ESP</text>
-                <text x="349" y="305" text-anchor="middle" fill="#bb88ee" font-size="9"   font-family="'Pretendard','Noto Sans KR',sans-serif">층별 침하계</text>
-                <text x="349" y="315" text-anchor="middle" fill="#9977aa" font-size="8"   font-family="'Pretendard','Noto Sans KR',sans-serif">Layer Settlement</text>
-                <path d="M 403 298 Q 510 275 570 240" stroke="#ff6633" stroke-width="1.5" fill="none" stroke-dasharray="5,4" opacity=".55"/>
-                <circle cx="403" cy="298" r="4" fill="#ff6633" opacity=".7"/>
-
-                <!-- ══ 센서 노드 3: 간극수압계 ══ -->
-                <!-- y=220, x=80 (연약점토 1층 좌측) -->
-                <rect x="30" y="205" width="108" height="46" rx="8" fill="#1a0a28" stroke="#5544bb" stroke-width="2" filter="url(#shadow)"/>
-                <rect x="30" y="205" width="108" height="5" rx="3" fill="#5544bb" opacity=".7"/>
-                <text x="84" y="222" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="700" font-family="Arial">PPT</text>
-                <text x="84" y="235" text-anchor="middle" fill="#aabbff" font-size="9"   font-family="'Pretendard','Noto Sans KR',sans-serif">간극수압계</text>
-                <text x="84" y="245" text-anchor="middle" fill="#8899cc" font-size="8"   font-family="'Pretendard','Noto Sans KR',sans-serif">Piezometer</text>
-                <path d="M 138 228 Q 310 220 440 198" stroke="#ff6633" stroke-width="1.5" fill="none" stroke-dasharray="5,4" opacity=".55"/>
-                <circle cx="138" cy="228" r="4" fill="#ff6633" opacity=".7"/>
-
-                <!-- ══ 센서 노드 4: 다채널 수집기 센서 ══ -->
-                <!-- y=350, x=200 (모래층) -->
-                <rect x="140" y="346" width="120" height="38" rx="8" fill="#1a0a28" stroke="#4488aa" stroke-width="2" filter="url(#shadow)"/>
-                <rect x="140" y="346" width="120" height="5" rx="3" fill="#4488aa" opacity=".7"/>
-                <text x="200" y="362" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="700" font-family="'Pretendard','Noto Sans KR',sans-serif">다채널 수집기</text>
-                <text x="200" y="378" text-anchor="middle" fill="#88ccdd" font-size="8.5" font-family="'Pretendard','Noto Sans KR',sans-serif">Multi-Channel Logger</text>
-                <path d="M 260 362 Q 420 340 530 310" stroke="#ff6633" stroke-width="1.5" fill="none" stroke-dasharray="5,4" opacity=".55"/>
-                <circle cx="260" cy="362" r="4" fill="#ff6633" opacity=".7"/>
-
-                <!-- ══ Cableless 뱃지 ══ -->
-                <rect x="430" y="355" width="150" height="32" rx="6" fill="rgba(15,30,15,0.85)" stroke="#22aa55" stroke-width="1.5"/>
-                <text x="505" y="368" text-anchor="middle" fill="#44ee88" font-size="10.5" font-weight="700" font-family="'Pretendard','Noto Sans KR',sans-serif">✓ Cableless 완전 무선화</text>
-                <text x="505" y="381" text-anchor="middle" fill="#88cc99" font-size="8.5" font-family="'Pretendard','Noto Sans KR',sans-serif">케이블 단선 위험 원천 제거</text>
-
-                <!-- ══ 배터리 아이콘 (10년+) ══ -->
-                <rect x="580" y="198" width="130" height="32" rx="6" fill="rgba(15,25,15,0.85)" stroke="#449933" stroke-width="1.2"/>
-                <text x="645" y="212" text-anchor="middle" fill="#88ee66" font-size="10" font-weight="700" font-family="'Pretendard','Noto Sans KR',sans-serif">🔋 배터리 내장 10년+</text>
-                <text x="645" y="225" text-anchor="middle" fill="#669944" font-size="8.5" font-family="'Pretendard','Noto Sans KR',sans-serif">외부 전원 · 배선 불필요</text>
-
-              </svg>
+              <img src="images/wireless.jpg"
+                   alt="지중무선통신 계측 시스템 — 수중 무선통신과 수압식 침하계 상세 일러스트"
+                   loading="lazy"
+                   decoding="async"
+                   style="width:100%;max-width:760px;display:block;margin:0 auto;border-radius:12px;">
             </div>
 
             <p data-i18n="prod.ugw.p">일본 坂田電機(주)(1952년 창업, 도쿄 니시도쿄시)는 <strong>저주파 자기장(10~100Hz) 방식의 지중무선통신</strong> 원천기술을 보유한 계측기·센서 전문 기업입니다. 흙·암반·해수를 투과하는 자기장으로 케이블 없이 해저 40~100m 심도의 센서 데이터를 지상까지 전송하며, 수집된 데이터는 클라우드 기반 관리 소프트웨어 <strong>DABROS</strong>를 통해 인터넷·스마트폰 어디서나 실시간 확인이 가능합니다. ATMACS는 국내 공인 파트너로서 현장 맞춤 설계·시공·운영을 담당합니다.</p>
@@ -3968,7 +3750,7 @@ document.addEventListener('DOMContentLoaded',function(){selectBiz('c1');});
               <div class="fg-model"><div class="fg-model-name">무선 간극수압계</div><div class="fg-model-desc" data-i18n="prod.ugw.fd5">비접촉 차동트랜스(Core-Coil) 구조. 절연저항 50MΩ+(JIS C 1102). 절연 저하 ~1MΩ 환경에서도 계측 지속. SUS316L 케이스, 운영온도 –30~+80°C, IP68 방수</div></div>
               <div class="fg-model"><div class="fg-model-name">다채널 지중무선 시스템</div><div class="fg-model-desc" data-i18n="prod.ugw.fd6">하나의 수집기로 침하·간극수압·경사 등 복수 센서 동시 관리. 2006년 기준 4개 댐 27대 무누적 고장 운용 실적</div></div>
               <div class="fg-model"><div class="fg-model-name">DABROS 데이터 관리 소프트웨어</div><div class="fg-model-desc" data-i18n="prod.ugw.fd7">지중무선 수집기와 연동하는 클라우드 기반 계측 관제 플랫폼. 인터넷·스마트폰 어디서나 실시간 데이터 열람·경보 설정·보고서 출력 지원</div></div>
-              <div class="fg-model"><div class="fg-model-name">IoT 수위계 (하천·농업용 저수지)</div><div class="fg-model-desc" data-i18n="prod.ugw.fd8">위기관리형 IoT 수위계. 클라우드 연동으로 하천·농업용 저수지 수위를 원격 모니터링. LTE·LoRa 통신, 태양광 배터리 자립 운용</div></div>
+              <div class="fg-model"><div class="fg-model-name">IoT 수위계</div><div class="fg-model-desc" data-i18n="prod.ugw.fd8">위기관리형 IoT 수위계. 클라우드 연동으로 하천·농업용 저수지 수위를 원격 모니터링. LTE·LoRa 통신, 태양광 배터리 자립 운용</div></div>
             </div>
 
             <!-- 국내외 적용 실적 -->
@@ -4147,196 +3929,83 @@ document.addEventListener('DOMContentLoaded',function(){selectBiz('c1');});
     <div class="table-wrap">
       <table class="perf-table">
         <thead>
-          <tr><th>공사(용역)명</th><th>공종</th><th>발주처</th><th>수행기간</th><th>연도</th></tr>
+          <tr><th data-i18n="perf.th.name">공사(용역)명</th><th data-i18n="perf.th.type">공종</th><th data-i18n="perf.th.client">발주처</th></tr>
         </thead>
         <tbody id="perfTableBody">
           <!-- 연약지반·항만 -->
-          <tr data-type="연약지반·항만"><td><div class="td-name">부산신항만㈜ 유지관리 계측 용역</div></td><td><span class="td-badge">연약지반·항만</span></td><td class="td-cl">부산신항만주식회사</td><td class="td-pd">2021 ~ 2025</td><td class="td-yr">2021</td></tr>
-          <tr data-type="연약지반·항만"><td><div class="td-name">부산에코델타시티 3단계 제1공구 연약지반 계측</div></td><td><span class="td-badge">연약지반·항만</span></td><td class="td-cl">㈜태영건설</td><td class="td-pd">2022 ~ 2024</td><td class="td-yr">2022</td></tr>
-          <tr data-type="연약지반·항만"><td><div class="td-name">새만금국가산업단지 2공구 매립 침하안정계측 용역</div></td><td><span class="td-badge">연약지반·항만</span></td><td class="td-cl">새만금국가산업단지</td><td class="td-pd">2020 ~ 2022</td><td class="td-yr">2020</td></tr>
-          <tr data-type="연약지반·항만"><td><div class="td-name">시흥 공공주택지구 조성공사 연약지반 침하안정관리</div></td><td><span class="td-badge">연약지반·항만</span></td><td class="td-cl">한국토지주택공사</td><td class="td-pd">2019 ~ 2021</td><td class="td-yr">2019</td></tr>
-          <tr data-type="연약지반·항만"><td><div class="td-name">Kuwait Al-Zour LNG Terminal 연약지반 계측</div></td><td><span class="td-badge">연약지반·항만</span></td><td class="td-cl">Kuwait Al-Zour Project</td><td class="td-pd">2017 ~ 2019</td><td class="td-yr">2017</td></tr>
+          <tr data-type="연약지반·항만"><td><div class="td-name">부산신항만㈜ 유지관리 계측 용역</div></td><td><span class="td-badge">연약지반·항만</span></td><td class="td-cl">부산신항만주식회사</td></tr>
+          <tr data-type="연약지반·항만"><td><div class="td-name">부산에코델타시티 3단계 제1공구 연약지반 계측</div></td><td><span class="td-badge">연약지반·항만</span></td><td class="td-cl">㈜태영건설</td></tr>
+          <tr data-type="연약지반·항만"><td><div class="td-name">새만금국가산업단지 2공구 매립 침하안정계측 용역</div></td><td><span class="td-badge">연약지반·항만</span></td><td class="td-cl">새만금국가산업단지</td></tr>
+          <tr data-type="연약지반·항만"><td><div class="td-name">시흥 공공주택지구 조성공사 연약지반 침하안정관리</div></td><td><span class="td-badge">연약지반·항만</span></td><td class="td-cl">한국토지주택공사</td></tr>
+          <tr data-type="연약지반·항만"><td><div class="td-name">Kuwait Al-Zour LNG Terminal 연약지반 계측</div></td><td><span class="td-badge">연약지반·항만</span></td><td class="td-cl">Kuwait Al-Zour Project</td></tr>
           <!-- 철도·지하철 -->
-          <tr data-type="철도·지하철"><td><div class="td-name">서울지하철 현장 계측 유지관리 점검 용역</div></td><td><span class="td-badge">철도·지하철</span></td><td class="td-cl">서울교통공사</td><td class="td-pd">2021 ~ 2025</td><td class="td-yr">2021</td></tr>
-          <tr data-type="철도·지하철"><td><div class="td-name">세종~포천 고속도로 안성~구리 제14공구 교량계측</div></td><td><span class="td-badge">철도·지하철</span></td><td class="td-cl">대림산업</td><td class="td-pd">2021 ~ 2023</td><td class="td-yr">2021</td></tr>
-          <tr data-type="철도·지하철"><td><div class="td-name">수도권광역급행철도 A노선 민간투자 건설공사 6공구</div></td><td><span class="td-badge">철도·지하철</span></td><td class="td-cl">GTX-A 민간투자사업</td><td class="td-pd">2020 ~ 2024</td><td class="td-yr">2020</td></tr>
-          <tr data-type="철도·지하철"><td><div class="td-name">부전~마산 복선전철 민간투자사업 5공구 냉장터널 자동화 계측</div></td><td><span class="td-badge">철도·지하철</span></td><td class="td-cl">에스케이건설</td><td class="td-pd">2018 ~ 2021</td><td class="td-yr">2018</td></tr>
-          <tr data-type="철도·지하철"><td><div class="td-name">서해선(홍성~송산) 복선전철 5공구 계측관리 및 유지관리</div></td><td><span class="td-badge">철도·지하철</span></td><td class="td-cl">삼성물산</td><td class="td-pd">2017 ~ 2020</td><td class="td-yr">2017</td></tr>
+          <tr data-type="철도·지하철"><td><div class="td-name">서울지하철 현장 계측 유지관리 점검 용역</div></td><td><span class="td-badge">철도·지하철</span></td><td class="td-cl">서울교통공사</td></tr>
+          <tr data-type="철도·지하철"><td><div class="td-name">세종~포천 고속도로 안성~구리 제14공구 교량계측</div></td><td><span class="td-badge">철도·지하철</span></td><td class="td-cl">대림산업</td></tr>
+          <tr data-type="철도·지하철"><td><div class="td-name">수도권광역급행철도 A노선 민간투자 건설공사 6공구</div></td><td><span class="td-badge">철도·지하철</span></td><td class="td-cl">GTX-A 민간투자사업</td></tr>
+          <tr data-type="철도·지하철"><td><div class="td-name">부전~마산 복선전철 민간투자사업 5공구 냉장터널 자동화 계측</div></td><td><span class="td-badge">철도·지하철</span></td><td class="td-cl">에스케이건설</td></tr>
+          <tr data-type="철도·지하철"><td><div class="td-name">서해선(홍성~송산) 복선전철 5공구 계측관리 및 유지관리</div></td><td><span class="td-badge">철도·지하철</span></td><td class="td-cl">삼성물산</td></tr>
           <!-- 교량·구조물 -->
-          <tr data-type="교량·구조물"><td><div class="td-name">인제38대교 계측시스템 유지관리 용역</div></td><td><span class="td-badge">교량·구조물</span></td><td class="td-cl">강원도 인제군</td><td class="td-pd">2020 ~ 2025</td><td class="td-yr">2020</td></tr>
-          <tr data-type="교량·구조물"><td><div class="td-name">2024년 교량 현장 IoT 계측시스템 설치 용역</div></td><td><span class="td-badge">교량·구조물</span></td><td class="td-cl">국토교통부</td><td class="td-pd">2024</td><td class="td-yr">2024</td></tr>
-          <tr data-type="교량·구조물"><td><div class="td-name">Korea-Myanmar Friendship Bridge 교량계측</div></td><td><span class="td-badge">교량·구조물</span></td><td class="td-cl">KOICA / 현대건설</td><td class="td-pd">2018 ~ 2020</td><td class="td-yr">2018</td></tr>
-          <tr data-type="교량·구조물"><td><div class="td-name">DOHA-Link(Kuwait) Project 교량계측 용역</div></td><td><span class="td-badge">교량·구조물</span></td><td class="td-cl">Kuwait DOHA-Link</td><td class="td-pd">2017 ~ 2019</td><td class="td-yr">2017</td></tr>
-          <tr data-type="교량·구조물"><td><div class="td-name">월드컵대교 건설공사 교량유지관리 계측 및 가시설 계측</div></td><td><span class="td-badge">교량·구조물</span></td><td class="td-cl">삼성물산</td><td class="td-pd">2018 ~ 2021</td><td class="td-yr">2018</td></tr>
+          <tr data-type="교량·구조물"><td><div class="td-name">인제38대교 계측시스템 유지관리 용역</div></td><td><span class="td-badge">교량·구조물</span></td><td class="td-cl">강원도 인제군</td></tr>
+          <tr data-type="교량·구조물"><td><div class="td-name">2024년 교량 현장 IoT 계측시스템 설치 용역</div></td><td><span class="td-badge">교량·구조물</span></td><td class="td-cl">국토교통부</td></tr>
+          <tr data-type="교량·구조물"><td><div class="td-name">Korea-Myanmar Friendship Bridge 교량계측</div></td><td><span class="td-badge">교량·구조물</span></td><td class="td-cl">KOICA / 현대건설</td></tr>
+          <tr data-type="교량·구조물"><td><div class="td-name">DOHA-Link(Kuwait) Project 교량계측 용역</div></td><td><span class="td-badge">교량·구조물</span></td><td class="td-cl">Kuwait DOHA-Link</td></tr>
+          <tr data-type="교량·구조물"><td><div class="td-name">월드컵대교 건설공사 교량유지관리 계측 및 가시설 계측</div></td><td><span class="td-badge">교량·구조물</span></td><td class="td-cl">삼성물산</td></tr>
           <!-- 도로·터널 -->
-          <tr data-type="도로·터널"><td><div class="td-name">인천~김포고속도로 유지관리 계측기 점검 및 분석 용역</div></td><td><span class="td-badge">도로·터널</span></td><td class="td-cl">㈜이도</td><td class="td-pd">2024 ~ 2026</td><td class="td-yr">2024</td></tr>
-          <tr data-type="도로·터널"><td><div class="td-name">영종~청라 연결도로(제3연륙교) 건설공사 제2공구 교량계측</div></td><td><span class="td-badge">도로·터널</span></td><td class="td-cl">㈜포스코이앤씨</td><td class="td-pd">2024 ~ 2025</td><td class="td-yr">2024</td></tr>
-          <tr data-type="도로·터널"><td><div class="td-name">송산그린시티-시화MTV 연결도로 건설공사 가설교량 계측 용역</div></td><td><span class="td-badge">도로·터널</span></td><td class="td-cl">디엘이앤씨</td><td class="td-pd">2024 ~ 2027</td><td class="td-yr">2024</td></tr>
-          <tr data-type="도로·터널"><td><div class="td-name">시화MTV 중1-117호선(서해안 우회도로) 건설공사 계측관리 용역</div></td><td><span class="td-badge">도로·터널</span></td><td class="td-cl">에스케이에코플랜트㈜</td><td class="td-pd">2021 ~ 2025</td><td class="td-yr">2021</td></tr>
-          <tr data-type="도로·터널"><td><div class="td-name">인천~김포고속도로 유지관리 계측기 통신장비 교체</div></td><td><span class="td-badge">도로·터널</span></td><td class="td-cl">금호개발상사㈜</td><td class="td-pd">2022 ~ 2024</td><td class="td-yr">2022</td></tr>
-          <tr data-type="도로·터널"><td><div class="td-name">세종~포천 고속도로 제11공구 기타공사 통합관리계측</div></td><td><span class="td-badge">도로·터널</span></td><td class="td-cl">대림산업</td><td class="td-pd">2021 ~ 2023</td><td class="td-yr">2021</td></tr>
-          <tr data-type="도로·터널"><td><div class="td-name">SRT 울현터널 모니터링구간 유지관리계측 및 분석용역</div></td><td><span class="td-badge">도로·터널</span></td><td class="td-cl">SR(주)</td><td class="td-pd">2020 ~ 2022</td><td class="td-yr">2020</td></tr>
-          <tr data-type="도로·터널"><td><div class="td-name">춘천~속초 철도건설 제4공구 노반신설 기타공사 계측</div></td><td><span class="td-badge">도로·터널</span></td><td class="td-cl">춘천~속초 철도건설</td><td class="td-pd">2019 ~ 2022</td><td class="td-yr">2019</td></tr>
+          <tr data-type="도로·터널"><td><div class="td-name">인천~김포고속도로 유지관리 계측기 점검 및 분석 용역</div></td><td><span class="td-badge">도로·터널</span></td><td class="td-cl">㈜이도</td></tr>
+          <tr data-type="도로·터널"><td><div class="td-name">영종~청라 연결도로(제3연륙교) 건설공사 제2공구 교량계측</div></td><td><span class="td-badge">도로·터널</span></td><td class="td-cl">㈜포스코이앤씨</td></tr>
+          <tr data-type="도로·터널"><td><div class="td-name">송산그린시티-시화MTV 연결도로 건설공사 가설교량 계측 용역</div></td><td><span class="td-badge">도로·터널</span></td><td class="td-cl">디엘이앤씨</td></tr>
+          <tr data-type="도로·터널"><td><div class="td-name">시화MTV 중1-117호선(서해안 우회도로) 건설공사 계측관리 용역</div></td><td><span class="td-badge">도로·터널</span></td><td class="td-cl">에스케이에코플랜트㈜</td></tr>
+          <tr data-type="도로·터널"><td><div class="td-name">인천~김포고속도로 유지관리 계측기 통신장비 교체</div></td><td><span class="td-badge">도로·터널</span></td><td class="td-cl">금호개발상사㈜</td></tr>
+          <tr data-type="도로·터널"><td><div class="td-name">세종~포천 고속도로 제11공구 기타공사 통합관리계측</div></td><td><span class="td-badge">도로·터널</span></td><td class="td-cl">대림산업</td></tr>
+          <tr data-type="도로·터널"><td><div class="td-name">SRT 울현터널 모니터링구간 유지관리계측 및 분석용역</div></td><td><span class="td-badge">도로·터널</span></td><td class="td-cl">SR(주)</td></tr>
+          <tr data-type="도로·터널"><td><div class="td-name">춘천~속초 철도건설 제4공구 노반신설 기타공사 계측</div></td><td><span class="td-badge">도로·터널</span></td><td class="td-cl">춘천~속초 철도건설</td></tr>
           <!-- LNG·플랜트 -->
-          <tr data-type="LNG·플랜트"><td><div class="td-name">동북아 LNG Hub 터미널 1단계 1차 EPCC(전남) 탱크 계측</div></td><td><span class="td-badge">LNG·플랜트</span></td><td class="td-cl">지에스건설㈜</td><td class="td-pd">2024 ~ 2027</td><td class="td-yr">2024</td></tr>
-          <tr data-type="LNG·플랜트"><td><div class="td-name">고성천연가스발전소 건설공사 (계측관리 용역)</div></td><td><span class="td-badge">LNG·플랜트</span></td><td class="td-cl">두산에너빌리티㈜</td><td class="td-pd">2025 ~ 2027</td><td class="td-yr">2025</td></tr>
-          <tr data-type="LNG·플랜트"><td><div class="td-name">당진 가스공사 당진기지 1단계 본설비 건설공사 계측관리 용역</div></td><td><span class="td-badge">LNG·플랜트</span></td><td class="td-cl">㈜포스코이앤씨</td><td class="td-pd">2023 ~ 2025</td><td class="td-yr">2023</td></tr>
-          <tr data-type="LNG·플랜트"><td><div class="td-name">당진기지~부곡 천연가스 공급시설 건설공사 세미쉴드 계측관리 용역</div></td><td><span class="td-badge">LNG·플랜트</span></td><td class="td-cl">㈜태영건설</td><td class="td-pd">2024 ~ 2025</td><td class="td-yr">2024</td></tr>
-          <tr data-type="LNG·플랜트"><td><div class="td-name">광양 No.7, 8 LNG 탱크 건설공사 중 연속침하계 계측관리</div></td><td><span class="td-badge">LNG·플랜트</span></td><td class="td-cl">㈜동일아이씨티</td><td class="td-pd">2025 ~ 2026</td><td class="td-yr">2025</td></tr>
-          <tr data-type="LNG·플랜트"><td><div class="td-name">보령 LNG Terminal 2-3단계 계측관리</div></td><td><span class="td-badge">LNG·플랜트</span></td><td class="td-cl">에스케이건설</td><td class="td-pd">2022 ~ 2024</td><td class="td-yr">2022</td></tr>
-          <tr data-type="LNG·플랜트"><td><div class="td-name">[LNG터미널] 지진관측시스템 외주용역 수리</div></td><td><span class="td-badge">LNG·플랜트</span></td><td class="td-cl">포스코에너지㈜</td><td class="td-pd">2021 ~ 2023</td><td class="td-yr">2021</td></tr>
-          <tr data-type="LNG·플랜트"><td><div class="td-name">광양LNG 탱크 프로젝트 건설공사 중 연속침하계측관리</div></td><td><span class="td-badge">LNG·플랜트</span></td><td class="td-cl">광양LNG 프로젝트</td><td class="td-pd">2018 ~ 2021</td><td class="td-yr">2018</td></tr>
-          <tr data-type="LNG·플랜트"><td><div class="td-name">당진지기 LNG탱크 건설공사 중 계측관리</div></td><td><span class="td-badge">LNG·플랜트</span></td><td class="td-cl">당진지기</td><td class="td-pd">2017 ~ 2019</td><td class="td-yr">2017</td></tr>
+          <tr data-type="LNG·플랜트"><td><div class="td-name">동북아 LNG Hub 터미널 1단계 1차 EPCC(전남) 탱크 계측</div></td><td><span class="td-badge">LNG·플랜트</span></td><td class="td-cl">지에스건설㈜</td></tr>
+          <tr data-type="LNG·플랜트"><td><div class="td-name">고성천연가스발전소 건설공사 (계측관리 용역)</div></td><td><span class="td-badge">LNG·플랜트</span></td><td class="td-cl">두산에너빌리티㈜</td></tr>
+          <tr data-type="LNG·플랜트"><td><div class="td-name">당진 가스공사 당진기지 1단계 본설비 건설공사 계측관리 용역</div></td><td><span class="td-badge">LNG·플랜트</span></td><td class="td-cl">㈜포스코이앤씨</td></tr>
+          <tr data-type="LNG·플랜트"><td><div class="td-name">당진기지~부곡 천연가스 공급시설 건설공사 세미쉴드 계측관리 용역</div></td><td><span class="td-badge">LNG·플랜트</span></td><td class="td-cl">㈜태영건설</td></tr>
+          <tr data-type="LNG·플랜트"><td><div class="td-name">광양 No.7, 8 LNG 탱크 건설공사 중 연속침하계 계측관리</div></td><td><span class="td-badge">LNG·플랜트</span></td><td class="td-cl">㈜동일아이씨티</td></tr>
+          <tr data-type="LNG·플랜트"><td><div class="td-name">보령 LNG Terminal 2-3단계 계측관리</div></td><td><span class="td-badge">LNG·플랜트</span></td><td class="td-cl">에스케이건설</td></tr>
+          <tr data-type="LNG·플랜트"><td><div class="td-name">[LNG터미널] 지진관측시스템 외주용역 수리</div></td><td><span class="td-badge">LNG·플랜트</span></td><td class="td-cl">포스코에너지㈜</td></tr>
+          <tr data-type="LNG·플랜트"><td><div class="td-name">광양LNG 탱크 프로젝트 건설공사 중 연속침하계측관리</div></td><td><span class="td-badge">LNG·플랜트</span></td><td class="td-cl">광양LNG 프로젝트</td></tr>
+          <tr data-type="LNG·플랜트"><td><div class="td-name">당진지기 LNG탱크 건설공사 중 계측관리</div></td><td><span class="td-badge">LNG·플랜트</span></td><td class="td-cl">당진지기</td></tr>
           <!-- 댐·수자원 -->
-          <tr data-type="댐·수자원"><td><div class="td-name">양양양수 상하부댐 외부변위계측용 광파기 구매</div></td><td><span class="td-badge">댐·수자원</span></td><td class="td-cl">한국수력원자력㈜ 양양양수발전소</td><td class="td-pd">2025</td><td class="td-yr">2025</td></tr>
-          <tr data-type="댐·수자원"><td><div class="td-name">무주양수 상하부댐 외부변위계측용 광파기 구매</div></td><td><span class="td-badge">댐·수자원</span></td><td class="td-cl">한국수력원자력㈜ 무주양수발전소</td><td class="td-pd">2025</td><td class="td-yr">2025</td></tr>
-          <tr data-type="댐·수자원"><td><div class="td-name">단양수중보 외부변위 자동계측기(광파기) 검교정 및 보수</div></td><td><span class="td-badge">댐·수자원</span></td><td class="td-cl">한국수자원공사</td><td class="td-pd">2025</td><td class="td-yr">2025</td></tr>
-          <tr data-type="댐·수자원"><td><div class="td-name">지표변위계 현장점검 (HRP 중앙연구원)</div></td><td><span class="td-badge">댐·수자원</span></td><td class="td-cl">한국수력원자력㈜ 중앙연구원</td><td class="td-pd">2023 ~ 2025</td><td class="td-yr">2023</td></tr>
-          <tr data-type="댐·수자원"><td><div class="td-name">영주댐 정상침하점 자동계측기 온도·기압 센서 설치</div></td><td><span class="td-badge">댐·수자원</span></td><td class="td-cl">한국수자원공사 영주댐지사</td><td class="td-pd">2022</td><td class="td-yr">2022</td></tr>
-          <tr data-type="댐·수자원"><td><div class="td-name">덕동댐 자동계측시스템(지하수위계, 외부변위계) 설치사업</div></td><td><span class="td-badge">댐·수자원</span></td><td class="td-cl">경상북도 경주시 맑은물사업본부</td><td class="td-pd">2022</td><td class="td-yr">2022</td></tr>
-          <tr data-type="댐·수자원"><td><div class="td-name">연초댐 계측자재 점검 및 교체 용역</div></td><td><span class="td-badge">댐·수자원</span></td><td class="td-cl">한국수자원공사 거제권관리단</td><td class="td-pd">2021 ~ 2023</td><td class="td-yr">2021</td></tr>
-          <tr data-type="댐·수자원"><td><div class="td-name">운문댐 외부변위 측정시스템 제조구매 설치</div></td><td><span class="td-badge">댐·수자원</span></td><td class="td-cl">한국수자원공사</td><td class="td-pd">2018 ~ 2019</td><td class="td-yr">2018</td></tr>
+          <tr data-type="댐·수자원"><td><div class="td-name">양양양수 상하부댐 외부변위계측용 광파기 구매</div></td><td><span class="td-badge">댐·수자원</span></td><td class="td-cl">한국수력원자력㈜ 양양양수발전소</td></tr>
+          <tr data-type="댐·수자원"><td><div class="td-name">무주양수 상하부댐 외부변위계측용 광파기 구매</div></td><td><span class="td-badge">댐·수자원</span></td><td class="td-cl">한국수력원자력㈜ 무주양수발전소</td></tr>
+          <tr data-type="댐·수자원"><td><div class="td-name">단양수중보 외부변위 자동계측기(광파기) 검교정 및 보수</div></td><td><span class="td-badge">댐·수자원</span></td><td class="td-cl">한국수자원공사</td></tr>
+          <tr data-type="댐·수자원"><td><div class="td-name">지표변위계 현장점검 (HRP 중앙연구원)</div></td><td><span class="td-badge">댐·수자원</span></td><td class="td-cl">한국수력원자력㈜ 중앙연구원</td></tr>
+          <tr data-type="댐·수자원"><td><div class="td-name">영주댐 정상침하점 자동계측기 온도·기압 센서 설치</div></td><td><span class="td-badge">댐·수자원</span></td><td class="td-cl">한국수자원공사 영주댐지사</td></tr>
+          <tr data-type="댐·수자원"><td><div class="td-name">덕동댐 자동계측시스템(지하수위계, 외부변위계) 설치사업</div></td><td><span class="td-badge">댐·수자원</span></td><td class="td-cl">경상북도 경주시 맑은물사업본부</td></tr>
+          <tr data-type="댐·수자원"><td><div class="td-name">연초댐 계측자재 점검 및 교체 용역</div></td><td><span class="td-badge">댐·수자원</span></td><td class="td-cl">한국수자원공사 거제권관리단</td></tr>
+          <tr data-type="댐·수자원"><td><div class="td-name">운문댐 외부변위 측정시스템 제조구매 설치</div></td><td><span class="td-badge">댐·수자원</span></td><td class="td-cl">한국수자원공사</td></tr>
           <!-- 사면·비탈면 -->
-          <tr data-type="사면·비탈면"><td><div class="td-name">부산항 신항 북'컨' 2단계 항만배후단지 조성공사, 터널 및 사면 계측관리 용역</div></td><td><span class="td-badge">사면·비탈면</span></td><td class="td-cl">디엘이앤씨㈜</td><td class="td-pd">2022 ~ 2034</td><td class="td-yr">2022</td></tr>
-          <tr data-type="사면·비탈면"><td><div class="td-name">동서발전 기반SW(토건시설물계측시스템) 유지관리 용역</div></td><td><span class="td-badge">사면·비탈면</span></td><td class="td-cl">한전케이디엔㈜</td><td class="td-pd">2022 ~ 2023</td><td class="td-yr">2022</td></tr>
-          <tr data-type="사면·비탈면"><td><div class="td-name">2021년 광주국토 관내 비탈면 모니터링시스템 구축용역</div></td><td><span class="td-badge">사면·비탈면</span></td><td class="td-cl">순천국토관리사무소</td><td class="td-pd">2021 ~ 2022</td><td class="td-yr">2021</td></tr>
-          <tr data-type="사면·비탈면"><td><div class="td-name">2021년 의정부국토 관내 비탈면 모니터링시스템 구축용역</div></td><td><span class="td-badge">사면·비탈면</span></td><td class="td-cl">의정부국토관리사무소</td><td class="td-pd">2021 ~ 2022</td><td class="td-yr">2021</td></tr>
-          <tr data-type="사면·비탈면"><td><div class="td-name">2021년 정선국토 관내 비탈면 모니터링시스템 구축용역</div></td><td><span class="td-badge">사면·비탈면</span></td><td class="td-cl">정선국토관리사무소</td><td class="td-pd">2021 ~ 2022</td><td class="td-yr">2021</td></tr>
-          <tr data-type="사면·비탈면"><td><div class="td-name">IoT 기반 회처리장 태양광설비부지 장기침하 모니터링 시스템 계측</div></td><td><span class="td-badge">사면·비탈면</span></td><td class="td-cl">한국동서발전㈜</td><td class="td-pd">2021</td><td class="td-yr">2021</td></tr>
-          <tr data-type="사면·비탈면"><td><div class="td-name">주요 토건시설물 자동계측 및 관리시스템 구축 용역</div></td><td><span class="td-badge">사면·비탈면</span></td><td class="td-cl">한국동서발전㈜</td><td class="td-pd">2019 ~ 2020</td><td class="td-yr">2019</td></tr>
-          <tr data-type="사면·비탈면"><td><div class="td-name">2020년 도계 흥전 재해위험개선지구 유지관리 계측용역</div></td><td><span class="td-badge">사면·비탈면</span></td><td class="td-cl">강원도 삼척시</td><td class="td-pd">2020 ~ 2021</td><td class="td-yr">2020</td></tr>
+          <tr data-type="사면·비탈면"><td><div class="td-name">부산항 신항 북'컨' 2단계 항만배후단지 조성공사, 터널 및 사면 계측관리 용역</div></td><td><span class="td-badge">사면·비탈면</span></td><td class="td-cl">디엘이앤씨㈜</td></tr>
+          <tr data-type="사면·비탈면"><td><div class="td-name">동서발전 기반SW(토건시설물계측시스템) 유지관리 용역</div></td><td><span class="td-badge">사면·비탈면</span></td><td class="td-cl">한전케이디엔㈜</td></tr>
+          <tr data-type="사면·비탈면"><td><div class="td-name">2021년 광주국토 관내 비탈면 모니터링시스템 구축용역</div></td><td><span class="td-badge">사면·비탈면</span></td><td class="td-cl">순천국토관리사무소</td></tr>
+          <tr data-type="사면·비탈면"><td><div class="td-name">2021년 의정부국토 관내 비탈면 모니터링시스템 구축용역</div></td><td><span class="td-badge">사면·비탈면</span></td><td class="td-cl">의정부국토관리사무소</td></tr>
+          <tr data-type="사면·비탈면"><td><div class="td-name">2021년 정선국토 관내 비탈면 모니터링시스템 구축용역</div></td><td><span class="td-badge">사면·비탈면</span></td><td class="td-cl">정선국토관리사무소</td></tr>
+          <tr data-type="사면·비탈면"><td><div class="td-name">IoT 기반 회처리장 태양광설비부지 장기침하 모니터링 시스템 계측</div></td><td><span class="td-badge">사면·비탈면</span></td><td class="td-cl">한국동서발전㈜</td></tr>
+          <tr data-type="사면·비탈면"><td><div class="td-name">주요 토건시설물 자동계측 및 관리시스템 구축 용역</div></td><td><span class="td-badge">사면·비탈면</span></td><td class="td-cl">한국동서발전㈜</td></tr>
+          <tr data-type="사면·비탈면"><td><div class="td-name">2020년 도계 흥전 재해위험개선지구 유지관리 계측용역</div></td><td><span class="td-badge">사면·비탈면</span></td><td class="td-cl">강원도 삼척시</td></tr>
           <!-- 건설IT·시스템 -->
-          <tr data-type="건설IT·시스템"><td><div class="td-name">K-스마트 도로관리시스템 기반 몽골 국가도로 디지털 도로관리 선진화 사업</div></td><td><span class="td-badge">건설IT·시스템</span></td><td class="td-cl">해외건설협회</td><td class="td-pd">2024 ~ 2028</td><td class="td-yr">2024</td></tr>
-          <tr data-type="건설IT·시스템"><td><div class="td-name">인도네시아 디지털·그린 도로건설기반 구축 사업(1차)</div></td><td><span class="td-badge">건설IT·시스템</span></td><td class="td-cl">해외건설협회</td><td class="td-pd">2023 ~ 2024</td><td class="td-yr">2023</td></tr>
-          <tr data-type="건설IT·시스템"><td><div class="td-name">도로포장 빅데이터시스템 구축(3-2단계) 용역</div></td><td><span class="td-badge">건설IT·시스템</span></td><td class="td-cl">서울특별시</td><td class="td-pd">2023 ~ 2024</td><td class="td-yr">2023</td></tr>
-          <tr data-type="건설IT·시스템"><td><div class="td-name">제한차량 인터넷 운행허가 시스템 유지관리 용역</div></td><td><span class="td-badge">건설IT·시스템</span></td><td class="td-cl">국토교통부</td><td class="td-pd">2019 ~ 2023</td><td class="td-yr">2019</td></tr>
-          <tr data-type="건설IT·시스템"><td><div class="td-name">포장관리시스템(PMS) DB 유지관리 및 시스템 개선</div></td><td><span class="td-badge">건설IT·시스템</span></td><td class="td-cl">한국건설기술연구원</td><td class="td-pd">2024 ~ 2025</td><td class="td-yr">2024</td></tr>
-          <tr data-type="건설IT·시스템"><td><div class="td-name">척척해결서비스 시스템 기능 고도화 및 개선</div></td><td><span class="td-badge">건설IT·시스템</span></td><td class="td-cl">한국건설기술연구원</td><td class="td-pd">2019 ~ 2025</td><td class="td-yr">2019</td></tr>
-          <tr data-type="건설IT·시스템"><td><div class="td-name">특수교 통합관리 계측시스템 SW 기능 고도화(재구축) 용역</div></td><td><span class="td-badge">건설IT·시스템</span></td><td class="td-cl">한국시설안전공단</td><td class="td-pd">2017</td><td class="td-yr">2017</td></tr>
-          <tr data-type="건설IT·시스템"><td><div class="td-name">철도 지진 수집·분석·운영시스템 및 통합운영플랫폼 제작</div></td><td><span class="td-badge">건설IT·시스템</span></td><td class="td-cl">한국철도기술연구원</td><td class="td-pd">2016 ~ 2017</td><td class="td-yr">2016</td></tr>
-          <tr data-type="건설IT·시스템"><td><div class="td-name">청송양수 상하부댐 자동계측 통합관리 시스템 구축</div></td><td><span class="td-badge">건설IT·시스템</span></td><td class="td-cl">한국수력원자력㈜</td><td class="td-pd">2017</td><td class="td-yr">2017</td></tr>
-          <tr data-type="건설IT·시스템"><td><div class="td-name">자연사면 산사태 모니터링시스템 구축 및 유지관리</div></td><td><span class="td-badge">건설IT·시스템</span></td><td class="td-cl">한국지질자원연구원</td><td class="td-pd">2014 ~ 2019</td><td class="td-yr">2014</td></tr>
-          <tr data-type="건설IT·시스템"><td><div class="td-name">건설사업정보시스템(CALS) 기능개선 및 운영지원</div></td><td><span class="td-badge">건설IT·시스템</span></td><td class="td-cl">한국건설기술연구원</td><td class="td-pd">2014 ~ 2019</td><td class="td-yr">2014</td></tr>
-          <tr data-type="건설IT·시스템"><td><div class="td-name">돌산~화태간 연도교 지진가속도 계측시스템 구축</div></td><td><span class="td-badge">건설IT·시스템</span></td><td class="td-cl">한진중공업</td><td class="td-pd">2015</td><td class="td-yr">2015</td></tr>
+          <tr data-type="건설IT·시스템"><td><div class="td-name">K-스마트 도로관리시스템 기반 몽골 국가도로 디지털 도로관리 선진화 사업</div></td><td><span class="td-badge">건설IT·시스템</span></td><td class="td-cl">해외건설협회</td></tr>
+          <tr data-type="건설IT·시스템"><td><div class="td-name">인도네시아 디지털·그린 도로건설기반 구축 사업(1차)</div></td><td><span class="td-badge">건설IT·시스템</span></td><td class="td-cl">해외건설협회</td></tr>
+          <tr data-type="건설IT·시스템"><td><div class="td-name">도로포장 빅데이터시스템 구축(3-2단계) 용역</div></td><td><span class="td-badge">건설IT·시스템</span></td><td class="td-cl">서울특별시</td></tr>
+          <tr data-type="건설IT·시스템"><td><div class="td-name">제한차량 인터넷 운행허가 시스템 유지관리 용역</div></td><td><span class="td-badge">건설IT·시스템</span></td><td class="td-cl">국토교통부</td></tr>
+          <tr data-type="건설IT·시스템"><td><div class="td-name">포장관리시스템(PMS) DB 유지관리 및 시스템 개선</div></td><td><span class="td-badge">건설IT·시스템</span></td><td class="td-cl">한국건설기술연구원</td></tr>
+          <tr data-type="건설IT·시스템"><td><div class="td-name">척척해결서비스 시스템 기능 고도화 및 개선</div></td><td><span class="td-badge">건설IT·시스템</span></td><td class="td-cl">한국건설기술연구원</td></tr>
+          <tr data-type="건설IT·시스템"><td><div class="td-name">특수교 통합관리 계측시스템 SW 기능 고도화(재구축) 용역</div></td><td><span class="td-badge">건설IT·시스템</span></td><td class="td-cl">한국시설안전공단</td></tr>
+          <tr data-type="건설IT·시스템"><td><div class="td-name">철도 지진 수집·분석·운영시스템 및 통합운영플랫폼 제작</div></td><td><span class="td-badge">건설IT·시스템</span></td><td class="td-cl">한국철도기술연구원</td></tr>
+          <tr data-type="건설IT·시스템"><td><div class="td-name">청송양수 상하부댐 자동계측 통합관리 시스템 구축</div></td><td><span class="td-badge">건설IT·시스템</span></td><td class="td-cl">한국수력원자력㈜</td></tr>
+          <tr data-type="건설IT·시스템"><td><div class="td-name">자연사면 산사태 모니터링시스템 구축 및 유지관리</div></td><td><span class="td-badge">건설IT·시스템</span></td><td class="td-cl">한국지질자원연구원</td></tr>
+          <tr data-type="건설IT·시스템"><td><div class="td-name">건설사업정보시스템(CALS) 기능개선 및 운영지원</div></td><td><span class="td-badge">건설IT·시스템</span></td><td class="td-cl">한국건설기술연구원</td></tr>
+          <tr data-type="건설IT·시스템"><td><div class="td-name">돌산~화태간 연도교 지진가속도 계측시스템 구축</div></td><td><span class="td-badge">건설IT·시스템</span></td><td class="td-cl">한진중공업</td></tr>
         </tbody>
       </table>
     </div>
   </div>
 </section>
 
-
-<!-- 대표 프로젝트 사례 -->
-<section style="background:var(--bg2);padding:72px 5%;border-top:1px solid var(--borderb);" id="case-studies">
-  <div class="container">
-    <div class="sec-hdr">
-      <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div>Case Studies</div>
-      <h2 class="sec-title" data-i18n="case.title">대표 프로젝트 사례</h2>
-      <p class="sec-sub" data-i18n="case.sub">ATMACS가 수행한 주요 현장의 계측 목적·적용 기술·성과를 소개합니다</p>
-    </div>
-    <div class="case-grid">
-      <div class="case-card">
-        <div class="case-img-wrap">
-          <picture>
-            <source type="image/webp" srcset="images/site/case-gtxb-railway-640w.webp 640w, images/site/case-gtxb-railway-1200w.webp 1200w" sizes="(max-width:900px) 100vw, 50vw">
-            <img class="case-img" src="images/site/case-gtxb-railway-1200w.jpg" alt="GTX-B 철도 터널 내부 계측 현장" loading="lazy" decoding="async">
-          </picture>
-          <div class="case-badge case-badge--rail">철도</div>
-        </div>
-        <div class="case-body">
-          <h3 class="case-title" data-i18n="case.1.title">수도권광역급행철도 B노선 (GTX-B) 3-1공구 계측용역</h3>
-          <div class="case-meta"><span>발주처</span><strong>DL E&amp;C</strong></div>
-          <div class="case-meta"><span>기간</span><strong>2025 – 2030</strong></div>
-          <div class="case-row">
-            <div class="case-col"><div class="case-label">현장 조건</div><p data-i18n="case.1.site">도심 지하 터널 및 노반 신설구간. 인접 구조물·지하매설물 다수 존재</p></div>
-            <div class="case-col"><div class="case-label">계측 목적</div><p data-i18n="case.1.purpose">터널 굴착 시 지반 침하·구조물 변위 실시간 감시 및 인접 시공 안전 확보</p></div>
-            <div class="case-col"><div class="case-label">적용 기술</div><p data-i18n="case.1.tech">GeoWebs 원격 모니터링, IoT 무선센서, 지중경사계, 지하수위계, 침하계</p></div>
-            <div class="case-col"><div class="case-label">성과</div><p data-i18n="case.1.result">24시간 자동 계측·경보 체계 구축, 이상 징후 조기 대응 및 원시 데이터 발주처 실시간 공유</p></div>
-          </div>
-        </div>
-      </div>
-      <div class="case-card">
-        <div class="case-img-wrap">
-          <picture>
-            <source type="image/webp" srcset="images/site/case-busan-eco-640w.webp 640w, images/site/case-busan-eco-1200w.webp 1200w" sizes="(max-width:900px) 100vw, 50vw">
-            <img class="case-img" src="images/site/case-busan-eco-1200w.jpg" alt="부산 연약지반 매립 항공 사진" loading="lazy" decoding="async">
-          </picture>
-          <div class="case-badge case-badge--soft">연약지반</div>
-        </div>
-        <div class="case-body">
-          <h3 class="case-title" data-i18n="case.2.title">부산에코델타시티 2단계 3공구 조성공사 계측관리</h3>
-          <div class="case-meta"><span>발주처</span><strong>현대건설</strong></div>
-          <div class="case-meta"><span>기간</span><strong>2018 – 2022</strong></div>
-          <div class="case-row">
-            <div class="case-col"><div class="case-label">현장 조건</div><p data-i18n="case.2.site">대규모 해안 매립지 연약지반. 장기 압밀 침하 및 측방 유동 위험 구간</p></div>
-            <div class="case-col"><div class="case-label">계측 목적</div><p data-i18n="case.2.purpose">성토 하중에 따른 연약지반 압밀 거동 감시 및 안전 시공 속도 결정 지원</p></div>
-            <div class="case-col"><div class="case-label">적용 기술</div><p data-i18n="case.2.tech">침하판, 간극수압계, 지중경사계, 지하수위계, 다층침하계, IoT 원격 전송</p></div>
-            <div class="case-col"><div class="case-label">성과</div><p data-i18n="case.2.result">계측 데이터 기반 성토 속도 조정으로 침하 안정성 확보, 4년간 원시 데이터 보존·제공</p></div>
-          </div>
-        </div>
-      </div>
-      <div class="case-card">
-        <div class="case-img-wrap">
-          <picture>
-            <source type="image/webp" srcset="images/site/case-busan-port-640w.webp 640w, images/site/case-busan-port-1200w.webp 1200w" sizes="(max-width:900px) 100vw, 50vw">
-            <img class="case-img" src="images/site/case-busan-port-1200w.jpg" alt="부산항 신항 컨테이너 야드 항공" loading="lazy" decoding="async">
-          </picture>
-          <div class="case-badge case-badge--port">항만</div>
-        </div>
-        <div class="case-body">
-          <h3 class="case-title" data-i18n="case.3.title">부산항 신항 북컨 2단계 항만배후단지 터널·사면 계측관리</h3>
-          <div class="case-meta"><span>발주처</span><strong>DL E&amp;C</strong></div>
-          <div class="case-meta"><span>기간</span><strong>2022 – 2034</strong></div>
-          <div class="case-row">
-            <div class="case-col"><div class="case-label">현장 조건</div><p data-i18n="case.3.site">운영 중 항만 인접 터널 굴착 및 대규모 사면 조성 구간</p></div>
-            <div class="case-col"><div class="case-label">계측 목적</div><p data-i18n="case.3.purpose">터널 내공 변위·숏크리트 응력 감시 및 사면 안정성 장기 모니터링</p></div>
-            <div class="case-col"><div class="case-label">적용 기술</div><p data-i18n="case.3.tech">내공변위계, 숏크리트 응력계, 지중경사계, GNSS, GeoWebs 원격 플랫폼</p></div>
-            <div class="case-col"><div class="case-label">성과</div><p data-i18n="case.3.result">12년 장기 계측 체계 구축, 시공~유지관리 전 단계 연속 데이터 관리 기반 마련</p></div>
-          </div>
-        </div>
-      </div>
-      <div class="case-card">
-        <div class="case-img-wrap">
-          <picture>
-            <source type="image/webp" srcset="images/site/case-dangjin-lng-640w.webp 640w, images/site/case-dangjin-lng-1200w.webp 1200w" sizes="(max-width:900px) 100vw, 50vw">
-            <img class="case-img" src="images/site/case-dangjin-lng-1200w.jpg" alt="LNG 탱크 시공 전경" loading="lazy" decoding="async">
-          </picture>
-          <div class="case-badge case-badge--lng">LNG</div>
-        </div>
-        <div class="case-body">
-          <h3 class="case-title" data-i18n="case.4.title">당진기지 LNG탱크 건설공사 토목계측</h3>
-          <div class="case-meta"><span>발주처</span><strong>두산중공업</strong></div>
-          <div class="case-meta"><span>기간</span><strong>2022 – 2025</strong></div>
-          <div class="case-row">
-            <div class="case-col"><div class="case-label">현장 조건</div><p data-i18n="case.4.site">대형 LNG 저장 탱크 시공 현장. 지반 침하 및 구조물 안전이 핵심 관리 요소</p></div>
-            <div class="case-col"><div class="case-label">계측 목적</div><p data-i18n="case.4.purpose">탱크 기초 지반 거동 계측 및 시공 중 침하·기울기 안전 관리</p></div>
-            <div class="case-col"><div class="case-label">적용 기술</div><p data-i18n="case.4.tech">침하계, 경사계, 하중계, 간극수압계, IoT 원격 계측 시스템</p></div>
-            <div class="case-col"><div class="case-label">성과</div><p data-i18n="case.4.result">계측 데이터 기반 하중 재하 속도 조정으로 안전 시공 완료, 원시 데이터 전량 발주처 제공</p></div>
-          </div>
-        </div>
-      </div>
-      <div class="case-card">
-        <div class="case-img-wrap">
-          <picture>
-            <source type="image/webp" srcset="images/site/case-jemulpo-tunnel-640w.webp 640w, images/site/case-jemulpo-tunnel-1200w.webp 1200w" sizes="(max-width:900px) 100vw, 50vw">
-            <img class="case-img" src="images/site/case-jemulpo-tunnel-1200w.jpg" alt="도심 지하 터널 내부" loading="lazy" decoding="async">
-          </picture>
-          <div class="case-badge case-badge--tunnel">터널</div>
-        </div>
-        <div class="case-body">
-          <h3 class="case-title" data-i18n="case.5.title">서울 제물포터널 제2공구 터널 및 가시설 계측용역</h3>
-          <div class="case-meta"><span>발주처</span><strong>대림산업</strong></div>
-          <div class="case-meta"><span>기간</span><strong>2018 – 2020</strong></div>
-          <div class="case-row">
-            <div class="case-col"><div class="case-label">현장 조건</div><p data-i18n="case.5.site">서울 도심 대심도 민간투자 터널. 인접 도로·지하매설물·건물 밀집 구간</p></div>
-            <div class="case-col"><div class="case-label">계측 목적</div><p data-i18n="case.5.purpose">굴착 시 흙막이 변위·인접 지반 침하·지하수위 변화 실시간 감시</p></div>
-            <div class="case-col"><div class="case-label">적용 기술</div><p data-i18n="case.5.tech">지중경사계, 지하수위계, 침하계, 하중계, 변형률계, 원격 자동화 계측</p></div>
-            <div class="case-col"><div class="case-label">성과</div><p data-i18n="case.5.result">민감 도심 구간 무사고 시공 지원, 계측 데이터 기반 설계 변경 의사결정 근거 제공</p></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- 기술력 -->
 <section class="tech-sec" id="technology">
@@ -5003,7 +4672,7 @@ const i18n_en = {
 
   /* KPI */
   'kpi.founded': 'Founded',
-  'kpi.exp':     'Years of Expertise',
+  'kpi.platform': 'Proprietary Platform',
   'kpi.sites':   'Projects Completed',
   'kpi.cert':    'International Certifications',
 
@@ -5037,11 +4706,11 @@ const i18n_en = {
   'phil.kelvin.text': '"If you cannot measure it, you cannot improve it." — Measurement is the beginning of knowledge; transparency is the beginning of trust.',
   'phil.kelvin.attr': 'From Lord Kelvin\'s philosophy to ATMACS\'s values',
   'phil.why.tag':  'Why — Why We Monitor',
-  'phil.why.h3':   'Turning Uncertain Ground Into Safe Decisions',
+  'phil.why.h3':   'Turning Invisible Risks Into Measurable Numbers',
   'phil.what.tag': 'What — What We Measure',
-  'phil.what.h3':  'Measuring the Key Variables That Explain Field Behavior',
+  'phil.what.h3':  'Measuring the Core Responses of Ground, Structure, and Environment',
   'phil.how.tag':  'How — How We Monitor',
-  'phil.how.h3':   'Define the Question, Measure Precisely, Interpret Transparently',
+  'phil.how.h3':   'Sensors · Platform · AI · Experts — Operating 24/7 as One System',
 
   /* core values */
   'cv.label':      'ATMACS Engineer Five Core Values',
@@ -5121,7 +4790,7 @@ const i18n_en = {
           <cite>Jung-Hoon Kim, CEO &middot; ATMACS Co., Ltd.</cite>
         </div>`,
 
-  'kpi.exp.num': '20<span style="font-size:.85rem;font-weight:600">yrs+</span>',
+  'kpi.platform.num': 'Geowebs<br><span style="font-size:.7rem;font-weight:600;color:#7c3aed;letter-spacing:.02em;">AI Monitoring Platform</span>',
 
   /* Company history timeline */
   'hist.tl': `
@@ -5581,6 +5250,9 @@ const i18n_en = {
 
   /* Performance section */
   'perf.sec.sub': 'Major monitoring projects directly performed by ATMACS',
+  'perf.th.name':   'Project (Service) Name',
+  'perf.th.type':   'Field',
+  'perf.th.client': 'Client',
   'perf.stat.bar': `<div><div class="psb-num">20+</div><div class="psb-lbl">Years in Business</div></div>
       <div><div class="psb-num">500+</div><div class="psb-lbl">Projects Completed</div></div>
       <div><div class="psb-num">7</div><div class="psb-lbl">Work Categories</div></div>
@@ -5769,85 +5441,56 @@ const i18n_en = {
 
   /* ── Org Chart (block, KO/EN bilingual) ── */
   'org.chart.wrap': `
-<svg class="org-svg" viewBox="0 0 1600 720" xmlns="http://www.w3.org/2000/svg" font-family="'Pretendard','Noto Sans KR',sans-serif">
+<svg class="org-svg" viewBox="0 0 1600 560" xmlns="http://www.w3.org/2000/svg" font-family="'Pretendard','Noto Sans KR',sans-serif">
   <defs>
-    <filter id="os1" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#4D1254" flood-opacity=".25"/></filter>
-    <filter id="os2" x="-15%" y="-15%" width="130%" height="130%"><feDropShadow dx="0" dy="2" stdDeviation="5" flood-color="#4D1254" flood-opacity=".18"/></filter>
-    <linearGradient id="ceo-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4D1254"/><stop offset="100%" stop-color="#6B2180"/></linearGradient>
+    <filter id="os1" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="5" stdDeviation="10" flood-color="#4D1254" flood-opacity=".28"/></filter>
+    <filter id="os2" x="-15%" y="-15%" width="130%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#4D1254" flood-opacity=".22"/></filter>
+    <linearGradient id="ceo-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4D1254"/><stop offset="100%" stop-color="#7C2496"/></linearGradient>
+    <linearGradient id="staff-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#6A2298"/><stop offset="100%" stop-color="#8B2DB0"/></linearGradient>
+    <linearGradient id="div-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#5A2287"/><stop offset="100%" stop-color="#7C2496"/></linearGradient>
   </defs>
-  <line x1="800" y1="135" x2="800" y2="172" stroke="rgba(150,100,180,0.45)" stroke-width="2.5"/>
-  <line x1="120" y1="172" x2="1480" y2="172" stroke="rgba(150,100,180,0.45)" stroke-width="2.5"/>
-  <line x1="120" y1="172" x2="120" y2="222" stroke="rgba(150,100,180,0.45)" stroke-width="2.5"/>
-  <line x1="1480" y1="172" x2="1480" y2="222" stroke="rgba(150,100,180,0.45)" stroke-width="2.5"/>
-  <line x1="800" y1="172" x2="800" y2="352" stroke="rgba(150,100,180,0.45)" stroke-width="2.5"/>
-  <line x1="215" y1="352" x2="1340" y2="352" stroke="rgba(150,100,180,0.45)" stroke-width="2.5"/>
-  <line x1="215" y1="352" x2="215" y2="392" stroke="rgba(150,100,180,0.45)" stroke-width="2.5"/>
-  <line x1="575" y1="352" x2="575" y2="392" stroke="rgba(150,100,180,0.45)" stroke-width="2.5"/>
-  <line x1="935" y1="352" x2="935" y2="392" stroke="rgba(150,100,180,0.45)" stroke-width="2.5"/>
-  <line x1="1340" y1="352" x2="1340" y2="392" stroke="rgba(150,100,180,0.45)" stroke-width="2.5"/>
-  <line x1="215" y1="482" x2="215" y2="512" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="130" y1="512" x2="300" y2="512" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="130" y1="512" x2="130" y2="552" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="300" y1="512" x2="300" y2="552" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="575" y1="482" x2="575" y2="512" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="490" y1="512" x2="660" y2="512" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="490" y1="512" x2="490" y2="552" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="660" y1="512" x2="660" y2="552" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="935" y1="482" x2="935" y2="512" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="850" y1="512" x2="1020" y2="512" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="850" y1="512" x2="850" y2="552" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="1020" y1="512" x2="1020" y2="552" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="1340" y1="482" x2="1340" y2="512" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="1200" y1="512" x2="1480" y2="512" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="1200" y1="512" x2="1200" y2="552" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="1340" y1="512" x2="1340" y2="552" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <line x1="1480" y1="512" x2="1480" y2="552" stroke="rgba(150,100,180,0.45)" stroke-width="2"/>
-  <rect x="570" y="22" width="460" height="113" rx="14" fill="url(#ceo-grad)" filter="url(#os1)"/>
-  <text x="800" y="70" text-anchor="middle" fill="white" font-size="32" font-weight="800">President & CEO</text>
-  <text x="800" y="100" text-anchor="middle" fill="rgba(255,255,255,.82)" font-size="16">ATMACS Co., Ltd.</text>
-  <rect x="20" y="222" width="200" height="83" rx="12" fill="#1A5E30" filter="url(#os2)"/>
-  <text x="120" y="258" text-anchor="middle" fill="white" font-size="19" font-weight="700">R&amp;D Lab</text>
-  <text x="120" y="282" text-anchor="middle" fill="rgba(255,255,255,.82)" font-size="12">R&amp;D Lab</text>
-  <rect x="1380" y="222" width="200" height="83" rx="12" fill="#5B1870" filter="url(#os2)"/>
-  <text x="1480" y="258" text-anchor="middle" fill="white" font-size="19" font-weight="700">Safety &amp; QC</text>
-  <text x="1480" y="282" text-anchor="middle" fill="rgba(255,255,255,.82)" font-size="12">Safety &amp; QC</text>
-  <rect x="90" y="392" width="250" height="90" rx="12" fill="#2E1B4E" filter="url(#os2)"/>
-  <text x="215" y="430" text-anchor="middle" fill="white" font-size="19" font-weight="700">Management</text>
-  <text x="215" y="454" text-anchor="middle" fill="rgba(255,255,255,.78)" font-size="12">Management</text>
-  <rect x="450" y="392" width="250" height="90" rx="12" fill="#3B0F6B" filter="url(#os2)"/>
-  <text x="575" y="430" text-anchor="middle" fill="white" font-size="19" font-weight="700">Procurement</text>
-  <text x="575" y="454" text-anchor="middle" fill="rgba(255,255,255,.78)" font-size="12">Procurement</text>
-  <rect x="810" y="392" width="250" height="90" rx="12" fill="#551B8A" filter="url(#os2)"/>
-  <text x="935" y="430" text-anchor="middle" fill="white" font-size="19" font-weight="700">Tech Sales</text>
-  <text x="935" y="454" text-anchor="middle" fill="rgba(255,255,255,.78)" font-size="12">Tech Sales</text>
-  <rect x="1215" y="392" width="250" height="90" rx="12" fill="#7A1055" filter="url(#os2)"/>
-  <text x="1340" y="430" text-anchor="middle" fill="white" font-size="19" font-weight="700">Monitoring Eng.</text>
-  <text x="1340" y="454" text-anchor="middle" fill="rgba(255,255,255,.78)" font-size="12">Monitoring Eng.</text>
-  <rect x="55" y="552" width="150" height="112" rx="10" fill="#3A2060" filter="url(#os2)"/>
-  <text x="130" y="600" text-anchor="middle" fill="white" font-size="16" font-weight="700">Finance</text>
-  <text x="130" y="620" text-anchor="middle" fill="white" font-size="16" font-weight="700">Acctg.</text>
-  <rect x="225" y="552" width="150" height="112" rx="10" fill="#3A2060" filter="url(#os2)"/>
-  <text x="300" y="600" text-anchor="middle" fill="white" font-size="16" font-weight="700">HR</text>
-  <text x="300" y="620" text-anchor="middle" fill="white" font-size="16" font-weight="700">Admin</text>
-  <rect x="415" y="552" width="150" height="112" rx="10" fill="#4A1580" filter="url(#os2)"/>
-  <text x="490" y="600" text-anchor="middle" fill="white" font-size="16" font-weight="700">Purchasing</text>
-  <text x="490" y="620" text-anchor="middle" fill="white" font-size="16" font-weight="700">Mgmt.</text>
-  <rect x="585" y="552" width="150" height="112" rx="10" fill="#4A1580" filter="url(#os2)"/>
-  <text x="660" y="600" text-anchor="middle" fill="white" font-size="16" font-weight="700">Overseas</text>
-  <text x="660" y="620" text-anchor="middle" fill="white" font-size="16" font-weight="700">Materials</text>
-  <rect x="775" y="552" width="150" height="112" rx="10" fill="#6A2298" filter="url(#os2)"/>
-  <text x="850" y="600" text-anchor="middle" fill="white" font-size="16" font-weight="700">Domestic</text>
-  <text x="850" y="620" text-anchor="middle" fill="white" font-size="16" font-weight="700">Sales</text>
-  <rect x="945" y="552" width="150" height="112" rx="10" fill="#6A2298" filter="url(#os2)"/>
-  <text x="1020" y="600" text-anchor="middle" fill="white" font-size="16" font-weight="700">Intl.</text>
-  <text x="1020" y="620" text-anchor="middle" fill="white" font-size="16" font-weight="700">Sales</text>
-  <rect x="1140" y="552" width="120" height="112" rx="10" fill="#8C1365" filter="url(#os2)"/>
-  <text x="1200" y="614" text-anchor="middle" fill="white" font-size="16" font-weight="700">Geotech</text>
-  <rect x="1280" y="552" width="120" height="112" rx="10" fill="#8C1365" filter="url(#os2)"/>
-  <text x="1340" y="600" text-anchor="middle" fill="white" font-size="16" font-weight="700">Yeongnam</text>
-  <text x="1340" y="620" text-anchor="middle" fill="white" font-size="16" font-weight="700">Branch</text>
-  <rect x="1420" y="552" width="120" height="112" rx="10" fill="#8C1365" filter="url(#os2)"/>
-  <text x="1480" y="614" text-anchor="middle" fill="white" font-size="16" font-weight="700">Structure</text>
+
+  <g stroke="rgba(124,36,150,0.45)" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <line x1="800" y1="135" x2="800" y2="210"/>
+    <line x1="310" y1="210" x2="1290" y2="210"/>
+    <line x1="800" y1="210" x2="800" y2="360"/>
+    <line x1="200" y1="360" x2="1400" y2="360"/>
+    <line x1="200" y1="360" x2="200" y2="400"/>
+    <line x1="600" y1="360" x2="600" y2="400"/>
+    <line x1="1000" y1="360" x2="1000" y2="400"/>
+    <line x1="1400" y1="360" x2="1400" y2="400"/>
+  </g>
+
+  <rect x="620" y="25" width="360" height="110" rx="16" fill="url(#ceo-grad)" filter="url(#os1)"/>
+  <text x="800" y="78" text-anchor="middle" fill="white" font-size="26" font-weight="800" letter-spacing="2">President &amp; CEO</text>
+  <text x="800" y="110" text-anchor="middle" fill="rgba(255,255,255,.85)" font-size="13" font-weight="500" letter-spacing="2">ATMACS Co., Ltd.</text>
+
+  <rect x="80" y="170" width="230" height="80" rx="12" fill="url(#staff-grad)" filter="url(#os2)"/>
+  <text x="195" y="200" text-anchor="middle" fill="white" font-size="14" font-weight="700">Technical Research</text>
+  <text x="195" y="220" text-anchor="middle" fill="white" font-size="14" font-weight="700">Institute</text>
+  <text x="195" y="240" text-anchor="middle" fill="rgba(255,255,255,.85)" font-size="11">기술연구소</text>
+
+  <rect x="1290" y="170" width="230" height="80" rx="12" fill="url(#staff-grad)" filter="url(#os2)"/>
+  <text x="1405" y="207" text-anchor="middle" fill="white" font-size="17" font-weight="700">Safety / Quality Office</text>
+  <text x="1405" y="233" text-anchor="middle" fill="rgba(255,255,255,.85)" font-size="11">안전품질실</text>
+
+  <rect x="70" y="400" width="260" height="120" rx="12" fill="url(#div-grad)" filter="url(#os2)"/>
+  <text x="200" y="442" text-anchor="middle" fill="white" font-size="17" font-weight="700">Business</text>
+  <text x="200" y="466" text-anchor="middle" fill="white" font-size="17" font-weight="700">Administration Office</text>
+  <text x="200" y="500" text-anchor="middle" fill="rgba(255,255,255,.85)" font-size="11">경영관리실</text>
+
+  <rect x="470" y="400" width="260" height="120" rx="12" fill="url(#div-grad)" filter="url(#os2)"/>
+  <text x="600" y="455" text-anchor="middle" fill="white" font-size="20" font-weight="700">Marketing Office</text>
+  <text x="600" y="492" text-anchor="middle" fill="rgba(255,255,255,.85)" font-size="11">마케팅 사업본부</text>
+
+  <rect x="870" y="400" width="260" height="120" rx="12" fill="url(#div-grad)" filter="url(#os2)"/>
+  <text x="1000" y="455" text-anchor="middle" fill="white" font-size="20" font-weight="700">Engineering Office</text>
+  <text x="1000" y="485" text-anchor="middle" fill="rgba(255,255,255,.85)" font-size="11">계측 엔지니어링</text>
+  <text x="1000" y="503" text-anchor="middle" fill="rgba(255,255,255,.85)" font-size="11">사업본부</text>
+
+  <rect x="1270" y="400" width="260" height="120" rx="12" fill="url(#div-grad)" filter="url(#os2)"/>
+  <text x="1400" y="455" text-anchor="middle" fill="white" font-size="20" font-weight="700">Youngnam Office</text>
+  <text x="1400" y="492" text-anchor="middle" fill="rgba(255,255,255,.85)" font-size="11">영남 사업본부</text>
 </svg>`,
 
   'phil.why.sum':   'Quantifying invisible risks and verifying the gap between design assumptions and actual field behavior.',
@@ -6075,34 +5718,6 @@ const i18n_en = {
 
 
 
-  /* Case Studies */
-  'case.title': 'Featured Project Case Studies',
-  'case.sub': 'Explore how ATMACS has applied monitoring expertise across major infrastructure projects',
-  'case.1.title': 'GTX-B Metropolitan Express Rail, Section 3-1 — Monitoring Services',
-  'case.1.site': 'Deep urban tunnel and subgrade construction with numerous adjacent structures and underground utilities',
-  'case.1.purpose': 'Real-time monitoring of ground settlement and structural displacement during tunneling; safeguarding adjacent construction',
-  'case.1.tech': 'GeoWebs remote monitoring platform, IoT wireless sensors, inclinometers, groundwater level meters, settlement gauges',
-  'case.1.result': '24/7 automated monitoring and alert system established; raw data shared to client in real time',
-  'case.2.title': 'Busan Eco Delta City Phase 2, Zone 3 — Soft Ground Monitoring',
-  'case.2.site': 'Large-scale coastal reclamation site with long-term consolidation settlement and lateral flow risk',
-  'case.2.purpose': 'Monitoring soft ground consolidation under fill loading; informing safe construction rate decisions',
-  'case.2.tech': 'Settlement plates, piezometers, inclinometers, groundwater level meters, multi-layer settlement gauges, IoT remote transmission',
-  'case.2.result': 'Fill rate adjusted based on monitoring data to ensure settlement stability; 4 years of raw data preserved and delivered',
-  'case.3.title': 'Busan New Port North Container Phase 2 — Tunnel & Slope Monitoring',
-  'case.3.site': 'Tunnel excavation and large-scale slope construction adjacent to an active port facility',
-  'case.3.purpose': 'Monitoring tunnel convergence and shotcrete stress; long-term slope stability surveillance',
-  'case.3.tech': 'Convergence gauges, shotcrete stress meters, inclinometers, GNSS, GeoWebs remote platform',
-  'case.3.result': '12-year long-term monitoring framework established; continuous data management spanning construction through maintenance',
-  'case.4.title': 'Dangjin LNG Tank Construction — Geotechnical Monitoring',
-  'case.4.site': 'Large LNG storage tank construction site; foundation ground behavior and structural safety as critical management factors',
-  'case.4.purpose': 'Monitoring foundation ground movement during construction; managing settlement and tilt safety',
-  'case.4.tech': 'Settlement gauges, inclinometers, load cells, piezometers, IoT remote monitoring system',
-  'case.4.result': 'Safe construction completion through load rate adjustments based on monitoring data; all raw data delivered to client',
-  'case.5.title': 'Seoul Jeomulpo Tunnel Section 2 — Tunnel & Temporary Structure Monitoring',
-  'case.5.site': 'Deep urban private investment tunnel in dense Seoul with adjacent roads, utilities, and buildings',
-  'case.5.purpose': 'Real-time monitoring of retaining wall displacement, ground settlement, and groundwater level during excavation',
-  'case.5.tech': 'Inclinometers, groundwater level meters, settlement gauges, load cells, strain gauges, automated remote monitoring',
-  'case.5.result': 'Zero-accident construction support in sensitive urban zone; monitoring data provided basis for design change decisions',
 
   'modal.charter.footer': 'Supplementary Provisions &middot; This Charter shall be enforced through the company&#39;s approval process and reviewed and revised periodically. &nbsp;|&nbsp; ATMACS Co., Ltd.',
 };
@@ -6366,12 +5981,12 @@ document.addEventListener('keydown', function(e) {
 const SVC_DATA = [
   {
     icon: '🏗️', num: '용역 01', title: '구조물 안전 계측 용역',
-    desc: '교량·터널·건축물·댐 등 국가 핵심 인프라의 안전성을 정밀 계측합니다. 구조물의 변위·하중·균열·진동을 실시간으로 모니터링하여 이상 징후를 조기에 감지하고, 유지관리 판단의 객관적 데이터 근거를 제공합니다.',
+    desc: '항만·LNG·터널·댐·교량·구조물 등 국가 핵심 인프라의 안전성을 정밀 계측합니다. 구조물의 변위·하중·균열·진동을 실시간으로 모니터링하여 이상 징후를 조기에 감지하고, 유지관리 판단의 객관적 데이터 근거를 제공합니다.',
     items: [
-      { icon: '🌉', name: '교량 계측', desc: '주경간 처짐, 앵커력, 케이블 장력, 교각 진동 계측' },
+      { icon: '⚓', name: '항만 및 LNG 계측', desc: '매립지 압밀침하, 안벽 변위, LNG 탱크 기초 침하·기울기 계측' },
       { icon: '🚇', name: '터널 계측', desc: '내공변위, 천단침하, 숏크리트 응력, 록볼트 축력' },
-      { icon: '🏢', name: '건축물 계측', desc: '기초침하, 구조체 기울기, 균열 진전 모니터링' },
-      { icon: '💧', name: '댐·수자원 계측', desc: '제체 침투압, 변위, 지진 응답 모니터링' },
+      { icon: '💧', name: '댐 수자원 계측', desc: '제체 침투압, 변위, 지진 응답 모니터링' },
+      { icon: '🌉', name: '교량 및 구조물 계측', desc: '주경간 처짐, 케이블 장력, 교각 진동, 기초침하·기울기·균열 진전' },
     ],
     sensors: ['변위계', '하중계', '균열계', '가속도계', '앵커력계', '경사계', '진동계', '응력계']
   },
@@ -6381,7 +5996,7 @@ const SVC_DATA = [
     items: [
       { icon: '🏗️', name: '흙막이·굴착 계측', desc: '벽체변위, 버팀대 축력, 지표면침하, 인접구조물 계측' },
       { icon: '🌊', name: '연약지반 계측', desc: '층별침하, 간극수압, 안정관리, 압밀도 판정' },
-      { icon: '🛣️', name: '도로성토 계측', desc: '성토부 침하, 사면 안정, 토압 계측' },
+      { icon: '🛣️', name: '제방/댐/철도/도로 성토 계측', desc: '제방·댐 침투압, 철도·도로 성토부 침하, 사면 안정, 토압 계측' },
       { icon: '⛰️', name: '사면·비탈면 계측', desc: '지중경사, 지하수위, 표면변위, 토석류 감지' },
     ],
     sensors: ['지중경사계', '침하계', '간극수압계', '토압계', '지하수위계', '변형률계', '층별침하계', '수평변위계']
@@ -6435,12 +6050,12 @@ const SVC_DATA = [
 const SVC_DATA_EN = [
   {
     icon: '🏗️', num: 'Service 01', title: 'Structural Safety Monitoring',
-    desc: 'Precision monitoring of key national infrastructure including bridges, tunnels, buildings and dams. Real-time monitoring of displacement, load, crack and vibration for early anomaly detection and objective maintenance data.',
+    desc: 'Precision monitoring of key national infrastructure including ports, LNG facilities, tunnels, dams, bridges and structures. Real-time monitoring of displacement, load, crack and vibration for early anomaly detection and objective maintenance data.',
     items: [
-      { icon: '🌉', name: 'Bridge Monitoring', desc: 'Main span deflection, anchor force, cable tension, pier vibration' },
+      { icon: '⚓', name: 'Port & LNG Monitoring', desc: 'Reclamation consolidation settlement, quay wall displacement, LNG tank foundation settlement & tilt' },
       { icon: '🚇', name: 'Tunnel Monitoring', desc: 'Convergence, crown settlement, shotcrete stress, rock bolt force' },
-      { icon: '🏢', name: 'Building Monitoring', desc: 'Foundation settlement, structural tilt, crack propagation monitoring' },
       { icon: '💧', name: 'Dam & Water Monitoring', desc: 'Seepage pressure, displacement, seismic response monitoring' },
+      { icon: '🌉', name: 'Bridge & Structure Monitoring', desc: 'Main span deflection, cable tension, pier vibration, foundation settlement, tilt & crack propagation' },
     ],
     sensors: ['Displacement Meter', 'Load Cell', 'Crack Meter', 'Accelerometer', 'Anchor Force Meter', 'Inclinometer', 'Vibration Meter', 'Stress Meter']
   },
@@ -6451,7 +6066,7 @@ const SVC_DATA_EN = [
       { icon: '🏗️', name: 'Earth Retaining & Excavation', desc: 'Wall displacement, strut force, surface settlement, adjacent structure monitoring' },
       { icon: '🌊', name: 'Soft Ground & Port', desc: 'Settlement, horizontal displacement, pore water pressure, consolidation monitoring' },
       { icon: '⛰️', name: 'Slope & Steep Terrain', desc: 'Inclination, displacement, groundwater, rainfall response monitoring' },
-      { icon: '🚇', name: 'Tunnel Construction', desc: 'Face convergence, crown settlement, ground deformation monitoring' },
+      { icon: '🛣️', name: 'Embankment Monitoring', desc: 'Levee/dam seepage, railway/road embankment settlement, slope stability, earth pressure' },
     ],
     sensors: ['Settlement Gauge', 'Inclinometer', 'Piezometer', 'Groundwater Level Meter', 'Earth Pressure Cell', 'Extensometer', 'Tiltmeter']
   },
@@ -6789,4 +6404,4 @@ function toggleTrans(btn_arg) {
 
 </body>
 </html>
-                                                                       
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
