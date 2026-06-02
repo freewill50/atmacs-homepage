@@ -1,0 +1,38 @@
+# ─────────────────────────────────────────────
+# ATMACS 홈페이지 — 배포 제외 파일
+# ─────────────────────────────────────────────
+
+# 내부 검토 자료 (Git에 올리지 않음)
+ATMACS_홈페이지_*.pdf
+ATMACS_홈페이지_*.pptx
+ATMACS_홈페이지_*.docx
+_review_slides/
+_review_thumbs/
+_review_thumbs.zip
+홈페이지자료/
+
+# 백업 파일
+index_backup_*.html
+*.bak
+*.tmp
+*~
+
+# 원본 이미지 (사이트에서 미사용, 156MB)
+images/originals/
+
+# 빈 폴더
+slide/
+
+# OS 메타파일
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 에디터
+.vscode/
+.idea/
+*.swp
+
+# 노드(추후 빌드툴 도입 시)
+node_modules/
+package-lock.json
