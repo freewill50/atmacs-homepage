@@ -1594,7 +1594,14 @@ footer {
   .own-tech-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-content { grid-template-columns: 1fr; gap: 2.5rem; }
   .hero-right { display: flex; }
-  .hero-main-img { max-width: 360px; margin: 0 auto; }
+  .hero-main-img {
+    max-width: 320px;
+    max-height: none;
+    margin: 0 auto;
+    mix-blend-mode: normal;
+    filter: drop-shadow(0 10px 28px rgba(68,0,102,.14));
+    animation: none;
+  }
   .biz-grid { grid-template-columns: 1fr; }
   .biz-grid-3 { grid-template-columns: 1fr; }
   .biz-row-top { grid-template-columns: repeat(2, 1fr); }
@@ -2538,11 +2545,14 @@ function switchOffice(office) {
       </div>
     </div>
     <div class="hero-right hero-img-wrap">
-      <img src="images/img_main.png"
-           alt="피사의 사탑 구조물 거동 다중 계측 시스템 — GNSS·경사계·광파기·지반센서" data-i18n-alt="img.hero.pisa.alt"
-           class="hero-main-img"
-           loading="eager"
-           decoding="async">
+      <picture>
+        <source srcset="images/img_main.webp" type="image/webp">
+        <img src="images/img_main.png"
+             alt="피사의 사탑 구조물 거동 다중 계측 시스템 — GNSS·경사계·광파기·지반센서" data-i18n-alt="img.hero.pisa.alt"
+             class="hero-main-img"
+             loading="eager"
+             decoding="async">
+      </picture>
     </div>
   </div>
 </section>
