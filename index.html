@@ -1411,8 +1411,27 @@ footer {
 }
 .footer-btm a { color: #c8b8e0; text-decoration: none; }
 .footer-btm a:hover { color: #fff; }
-/* 푸터 CI 로고 */
-.footer-ci-logo { height: 36px; width: auto; filter: brightness(0) invert(1); opacity: 1; margin-bottom: 1rem; display: block; }
+/* 푸터 CI 그룹 (심볼 + 문자 로고) */
+.footer-ci-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.footer-ci-logo {
+  height: 44px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,.3));
+}
+.footer-ci-text {
+  height: 44px;
+  width: auto;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.3);
+}
 
 /* ── 기술·제품 ── */
 .products-sec { background: var(--bg); }
@@ -4282,9 +4301,16 @@ document.addEventListener('DOMContentLoaded',function(){selectBiz('c1');});
       <p class="sec-sub" data-i18n="ci.sub"><strong>Advanced Technology Monitoring system Associated with Civil Structures</strong><br>IoT 기반 최첨단 모니터링 기술로 지반 및 구조물의 안전을 보장하는 ATMACS의 브랜드 아이덴티티</p>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-top:2rem;">
-      <div style="background:var(--bg2);border:1px solid var(--borderb);border-radius:16px;padding:3rem;text-align:center;">
-        <img src="images/atmacs_logo.png" alt="ATMACS 공식 CI" data-i18n-alt="img.ci.alt" style="max-width:85%;height:auto;">
-        <div style="margin-top:1.5rem;font-size:.75rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;">공식 CI / Official Brand Mark</div>
+      <div style="background:var(--bg2);border:1px solid var(--borderb);border-radius:16px;padding:2.4rem 2rem;text-align:center;display:flex;flex-direction:column;gap:1.8rem;">
+        <div>
+          <img src="images/AT로고_회사명포함_2018.03.06 (1).jpg" alt="ATMACS 공식 CI — (주)에이티맥스" style="max-width:90%;height:auto;display:block;margin:0 auto;">
+          <div style="margin-top:1rem;font-size:.7rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;">국문 CI / Korean Brand Mark</div>
+        </div>
+        <hr style="border:0;border-top:1px solid var(--borderb);margin:0;">
+        <div>
+          <img src="images/영문_atmacs_가로.png" alt="ATMACS 공식 CI — advanced technology" data-i18n-alt="img.ci.alt" style="max-width:90%;height:auto;display:block;margin:0 auto;">
+          <div style="margin-top:1rem;font-size:.7rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;">영문 CI / English Brand Mark</div>
+        </div>
       </div>
       <div>
         <div style="margin-bottom:1.5rem;">
@@ -4373,7 +4399,10 @@ document.addEventListener('DOMContentLoaded',function(){selectBiz('c1');});
 <footer>
   <div class="footer-grid">
     <div class="fb">
-      <img src="images/atmacs_logo.png" alt="ATMACS" class="footer-ci-logo">
+      <div class="footer-ci-group">
+        <img src="images/atmacs_ci.png" alt="ATMACS AT 심볼" class="footer-ci-logo">
+        <img src="images/AT로고_문자만.jpg" alt="ATMACS — advanced technology" class="footer-ci-text">
+      </div>
       <p><span data-i18n="footer.desc">주식회사 ATMACS | 구조물·지반 계측 용역 전문 기업</span><br>
       <span data-i18n="footer.contact">대표전화: 031-697-2700 | Email: info@atmacs.co.kr<br>
       경기도 성남시 수정구 복정로 135번지 5층</span></p>
