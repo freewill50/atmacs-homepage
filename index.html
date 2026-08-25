@@ -1,7 +1,10 @@
+<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <title data-i18n="page.title">ATMACS - 구조물·지반 계측 용역 전문 기업</title>
 <!-- SEO: Meta Description -->
 <meta name="description" content="ATMACS는 구조물·지반 계측, IoT 무선센서, GeoWebs 기반 원격 모니터링을 통해 주요 인프라의 안전한 의사결정을 지원하는 건설 계측 엔지니어링 기업입니다.">
@@ -41,7 +44,7 @@
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+82-31-697-2700",
+    "telephone": "+82-2-449-2310",
     "contactType": "customer service"
   }
 }
@@ -2349,6 +2352,8 @@ function switchOffice(office) {
   transition: opacity .6s ease;
 }
 .iot-slide.active { opacity: 1; }
+.iot-slides picture, .geo-slides picture { position: absolute; inset: 0; width: 100%; height: 100%; }
+.co-engineer-img-wrap picture { display: block; }
 /* JPG 흰 배경 제거 */
 .iot-slide-jpg { mix-blend-mode: multiply; }
 .iot-arrow {
@@ -2508,7 +2513,7 @@ function switchOffice(office) {
 <!-- TOPBAR -->
 <div class="topbar">
   <div class="tb-l">
-    <a href="tel:031-697-2700">☎ 031-697-2700</a>
+    <a href="tel:02-449-2310">☎ 02-449-2310</a>
     <a href="mailto:info@atmacs.co.kr">✉ info@atmacs.co.kr</a>
   </div>
   <div class="tb-r">
@@ -2679,11 +2684,14 @@ function switchOffice(office) {
       </div>
       <div class="co-right-col">
         <div class="co-engineer-img-wrap">
-          <img src="images/img_about.png"
+          <picture>
+            <source srcset="images/img_about.webp" type="image/webp">
+            <img src="images/img_about.png"
                alt="ATMACS Monitoring Engineer — 현장 계측 센서 설치 및 실시간 데이터 모니터링" data-i18n-alt="img.hero.eng.alt"
                class="co-engineer-img"
                loading="lazy"
                decoding="async">
+          </picture>
         </div>
         <div class="co-kpi">
           <div class="co-kpi-card">
@@ -3284,11 +3292,26 @@ document.addEventListener('DOMContentLoaded',function(){selectBiz('c1');});
           <!-- 좌: 슬라이더 -->
           <div class="pcc-iot-slider" onclick="event.stopPropagation()">
             <div class="iot-slides">
-              <img src="images/iot_gateway.png"     class="iot-slide active" alt="ATMACS LoRa Gateway" loading="lazy">
-              <img src="images/iot_tiltmeter.png"   class="iot-slide" alt="경사계 일체형 노드" data-i18n-alt="img.iot.n1.alt" loading="lazy">
-              <img src="images/iot_laser.jpg"       class="iot-slide iot-slide-jpg" alt="레이저 일체형 노드" data-i18n-alt="img.iot.n2.alt" loading="lazy">
-              <img src="images/iot_vibration_1.jpg" class="iot-slide iot-slide-jpg" alt="진동현식 센서 노드 CH4" data-i18n-alt="img.iot.n3.alt" loading="lazy">
-              <img src="images/iot_vibration_2.jpg" class="iot-slide iot-slide-jpg" alt="진동현식 센서 노드 (측면)" data-i18n-alt="img.iot.n4.alt" loading="lazy">
+              <picture>
+                <source srcset="images/iot_gateway.webp" type="image/webp">
+                <img src="images/iot_gateway.png"     class="iot-slide active" alt="ATMACS LoRa Gateway" loading="lazy">
+              </picture>
+              <picture>
+                <source srcset="images/iot_tiltmeter.webp" type="image/webp">
+                <img src="images/iot_tiltmeter.png"   class="iot-slide" alt="경사계 일체형 노드" data-i18n-alt="img.iot.n1.alt" loading="lazy">
+              </picture>
+              <picture>
+                <source srcset="images/iot_laser.webp" type="image/webp">
+                <img src="images/iot_laser.jpg"       class="iot-slide iot-slide-jpg" alt="레이저 일체형 노드" data-i18n-alt="img.iot.n2.alt" loading="lazy">
+              </picture>
+              <picture>
+                <source srcset="images/iot_vibration_1.webp" type="image/webp">
+                <img src="images/iot_vibration_1.jpg" class="iot-slide iot-slide-jpg" alt="진동현식 센서 노드 CH4" data-i18n-alt="img.iot.n3.alt" loading="lazy">
+              </picture>
+              <picture>
+                <source srcset="images/iot_vibration_2.webp" type="image/webp">
+                <img src="images/iot_vibration_2.jpg" class="iot-slide iot-slide-jpg" alt="진동현식 센서 노드 (측면)" data-i18n-alt="img.iot.n4.alt" loading="lazy">
+              </picture>
             </div>
             <button class="iot-arrow iot-prev" onclick="iotSlideNav(-1)" aria-label="이전" data-i18n-aria="btn.prev">&#8249;</button>
             <button class="iot-arrow iot-next" onclick="iotSlideNav(1)"  aria-label="다음" data-i18n-aria="btn.next">&#8250;</button>
@@ -3322,7 +3345,10 @@ document.addEventListener('DOMContentLoaded',function(){selectBiz('c1');});
           <!-- 우: 이미지 슬라이더 -->
           <div class="pcc-geo-slider" onclick="event.stopPropagation()">
             <div class="geo-slides">
-              <img src="images/geo_screen_01.png" class="geo-slide geo-slide-wide active" alt="GeoWebs 계측현장 지도 현황" data-i18n-alt="img.geo.s1.alt" loading="lazy">
+              <picture>
+                <source srcset="images/geo_screen_01.webp" type="image/webp">
+                <img src="images/geo_screen_01.png" class="geo-slide geo-slide-wide active" alt="GeoWebs 계측현장 지도 현황" data-i18n-alt="img.geo.s1.alt" loading="lazy">
+              </picture>
               <img src="images/geo_screen_02.png" class="geo-slide geo-slide-wide" alt="GeoWebs 경사계 시계열 차트" data-i18n-alt="img.geo.s2.alt" loading="lazy">
               <img src="images/geo_screen_03.png" class="geo-slide geo-slide-wide" alt="GeoWebs 구조물경사계 분석 차트" data-i18n-alt="img.geo.s3.alt" loading="lazy">
               <img src="images/geo_screen_04.png" class="geo-slide geo-slide-wide" alt="GeoWebs 처짐계 Time vs Displacement" data-i18n-alt="img.geo.s4.alt" loading="lazy">
@@ -4243,7 +4269,7 @@ document.addEventListener('DOMContentLoaded',function(){selectBiz('c1');});
               </div>
               <div class="loc-divider"></div>
               <div class="loc-contact">
-                <div class="loc-contact-row"><span>📞</span><span data-i18n="loc.phone.lbl">대표전화</span><strong>031-697-2700</strong></div>
+                <div class="loc-contact-row"><span>📞</span><span data-i18n="loc.phone.lbl">대표전화</span><strong>02-449-2310</strong></div>
                 <div class="loc-contact-row"><span>✉️</span><span data-i18n="loc.email.lbl">이메일</span><strong>info@atmacs.co.kr</strong></div>
               </div>
               <a class="loc-gmaps-btn"
@@ -4281,7 +4307,7 @@ document.addEventListener('DOMContentLoaded',function(){selectBiz('c1');});
               </div>
               <div class="loc-divider"></div>
               <div class="loc-contact">
-                <div class="loc-contact-row"><span>📞</span><span data-i18n="loc.phone.lbl">대표전화</span><strong>031-697-2700</strong></div>
+                <div class="loc-contact-row"><span>📞</span><span data-i18n="loc.phone.lbl">대표전화</span><strong>02-449-2310</strong></div>
                 <div class="loc-contact-row"><span>✉️</span><span data-i18n="loc.email.lbl">이메일</span><strong>info@atmacs.co.kr</strong></div>
               </div>
               <a class="loc-gmaps-btn"
@@ -4338,18 +4364,18 @@ document.addEventListener('DOMContentLoaded',function(){selectBiz('c1');});
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-bottom:1.5rem;">
           <div style="border:1px solid var(--borderb);border-radius:8px;padding:.9rem 1rem;">
-            <div style="width:24px;height:24px;background:#440066;border-radius:4px;margin-bottom:.5rem;"></div>
+            <div style="width:24px;height:24px;background:#4D1254;border-radius:4px;margin-bottom:.5rem;"></div>
             <div style="font-size:.75rem;font-weight:700;color:var(--text);">Primary Purple</div>
-            <div data-i18n="ci.col1" style="font-size:.7rem;color:var(--muted);">#440066 — 신뢰·전문성</div>
+            <div data-i18n="ci.col1" style="font-size:.7rem;color:var(--muted);">#4D1254 — 신뢰·전문성</div>
           </div>
           <div style="border:1px solid var(--borderb);border-radius:8px;padding:.9rem 1rem;">
-            <div style="width:24px;height:24px;background:#7b30a8;border-radius:4px;margin-bottom:.5rem;"></div>
-            <div style="font-size:.75rem;font-weight:700;color:var(--text);">Secondary Purple</div>
-            <div data-i18n="ci.col2" style="font-size:.7rem;color:var(--muted);">#7b30a8 — 혁신·활력</div>
+            <div style="width:24px;height:24px;background:#E125C1;border-radius:4px;margin-bottom:.5rem;"></div>
+            <div style="font-size:.75rem;font-weight:700;color:var(--text);">Accent Red</div>
+            <div data-i18n="ci.col2" style="font-size:.7rem;color:var(--muted);">#E125C1 — 열정·강조</div>
           </div>
         </div>
         <div style="background:var(--bg2);border-radius:8px;padding:1rem 1.2rem;font-size:.82rem;color:var(--muted);line-height:1.7;">
-          <span data-i18n="ci.note">🎨 홈페이지 전체 색상 체계가 공식 CI 색상(퍼플 계열)으로 통일되어 있습니다. 명함·브로슈어·PT 등 모든 회사 자료는 동일한 CI 가이드라인을 따릅니다.</span>
+          <span data-i18n="ci.note">🎨 홈페이지 전체 색상 체계가 공식 CI 색상(퍼플 + 레드)으로 통일되어 있습니다. 명함·브로슈어·PT 등 모든 회사 자료는 동일한 CI 가이드라인을 따릅니다.</span>
         </div>
       </div>
     </div>
@@ -4365,19 +4391,19 @@ document.addEventListener('DOMContentLoaded',function(){selectBiz('c1');});
         <h2 data-i18n="cont.h2">Monitoring Engineer와<br><em>직접 상담</em>하세요</h2>
         <p data-i18n="cont.p">현장 조건에 최적화된 계측 용역 계획을 제안해 드립니다. 계획 수립부터 보고서 납품까지 전 과정을 지원합니다.</p>
         <div class="cd-list">
-          <div class="cd-row"><div class="cd-icon">📞</div><div><div class="cd-lbl" data-i18n="cont.phone.lbl">대표전화</div><div class="cd-val">031-697-2700</div></div></div>
+          <div class="cd-row"><div class="cd-icon">📞</div><div><div class="cd-lbl" data-i18n="cont.phone.lbl">대표전화</div><div class="cd-val">02-449-2310</div></div></div>
           <div class="cd-row"><div class="cd-icon">✉️</div><div><div class="cd-lbl" data-i18n="cont.email.lbl">이메일</div><div class="cd-val">info@atmacs.co.kr</div></div></div>
           <div class="cd-row"><div class="cd-icon">📍</div><div><div class="cd-lbl" data-i18n="cont.addr.lbl">주소</div><div class="cd-val" data-i18n="cont.addr.val">서울특별시 송파구 송파대로 111, 파크하비오 205동 717호 (7층)</div></div></div>
         </div>
       </div>
       <form class="c-form" onsubmit="handleSubmit(event)">
         <div class="form-r2">
-          <div class="fg"><label data-i18n="cont.f.company">회사·기관명</label><input type="text" data-i18n-ph="cont.f.company.ph" placeholder="발주처 또는 시공사명" data-i18n-ph="cont.f.company.ph"></div>
-          <div class="fg"><label data-i18n="cont.f.name">담당자명</label><input type="text" data-i18n-ph="cont.f.name.ph" placeholder="홍길동" data-i18n-ph="cont.f.name.ph"></div>
+          <div class="fg"><label data-i18n="cont.f.company">회사·기관명</label><input type="text" data-i18n-ph="cont.f.company.ph" placeholder="발주처 또는 시공사명"></div>
+          <div class="fg"><label data-i18n="cont.f.name">담당자명</label><input type="text" data-i18n-ph="cont.f.name.ph" placeholder="홍길동"></div>
         </div>
         <div class="form-r2">
           <div class="fg"><label data-i18n="cont.f.email">이메일</label><input type="email" placeholder="contact@company.com"></div>
-          <div class="fg"><label data-i18n="cont.f.phone">연락처</label><input type="tel" data-i18n-ph="cont.f.phone.ph" placeholder="031-697-2700"></div>
+          <div class="fg"><label data-i18n="cont.f.phone">연락처</label><input type="tel" data-i18n-ph="cont.f.phone.ph" placeholder="02-449-2310"></div>
         </div>
         <div class="fg">
           <label data-i18n="cont.f.type">용역 유형</label>
@@ -4391,7 +4417,7 @@ document.addEventListener('DOMContentLoaded',function(){selectBiz('c1');});
             <option data-ko="기타" data-en="Other">기타</option>
           </select>
         </div>
-        <div class="fg"><label data-i18n="cont.f.desc">현장 개요 및 요청 사항</label><textarea data-i18n-ph="cont.f.desc.ph" placeholder="현장명, 위치, 계측 항목, 기간, 규모 등 기술해 주시면 정확한 용역 계획 수립이 가능합니다." data-i18n-ph="cont.f.desc.ph"></textarea></div>
+        <div class="fg"><label data-i18n="cont.f.desc">현장 개요 및 요청 사항</label><textarea data-i18n-ph="cont.f.desc.ph" placeholder="현장명, 위치, 계측 항목, 기간, 규모 등 기술해 주시면 정확한 용역 계획 수립이 가능합니다."></textarea></div>
         <div class="c-form-footer">
           <button type="submit" class="btn-sub" data-i18n="cont.f.btn">용역 문의 보내기</button>
           <span class="c-note" data-i18n="cont.f.note">영업일 기준 24시간 내 회신</span>
@@ -4410,7 +4436,7 @@ document.addEventListener('DOMContentLoaded',function(){selectBiz('c1');});
         <img src="images/AT로고_문자만.jpg" alt="ATMACS — advanced technology" class="footer-ci-text">
       </div>
       <p><span data-i18n="footer.desc">주식회사 ATMACS | 구조물·지반 계측 용역 전문 기업</span><br>
-      <span data-i18n="footer.contact">대표전화: 031-697-2700 | Email: info@atmacs.co.kr<br>
+      <span data-i18n="footer.contact">대표전화: 02-449-2310 | Email: info@atmacs.co.kr<br>
       서울특별시 송파구 송파대로 111, 파크하비오 205동 717호 (7층)</span></p>
       <div class="f-certs">
         <span class="fc-badge">ISO 9001</span>
@@ -5240,9 +5266,9 @@ const i18n_en = {
               <span style="color:var(--accent);">S</span>tructures
             </div>`,
   'ci.meaning.p': 'A company dedicated to <strong style="color:var(--text);">ensuring the safety of citizens\' lives and civil infrastructure</strong> through IoT-based advanced monitoring technology and high-quality measurement management of ground and structures.',
-  'ci.col1':      '#440066 — Trust &amp; Expertise',
-  'ci.col2':      '#7b30a8 — Innovation &amp; Vitality',
-  'ci.note':      '🎨 The entire website color scheme is unified in the official CI purple palette. All company materials — business cards, brochures, presentations — follow the same CI guidelines.',
+  'ci.col1':      '#4D1254 — Trust &amp; Expertise',
+  'ci.col2':      '#E125C1 — Passion &amp; Emphasis',
+  'ci.note':      '🎨 The entire website color scheme is unified in the official CI colors (purple + red). All company materials — business cards, brochures, presentations — follow the same CI guidelines.',
 
   /* Contact */
   'cont.h2': 'Consult Directly With<br><em>Our Monitoring Experts</em>',
@@ -5272,7 +5298,7 @@ const i18n_en = {
   'cont.f.note':    'A monitoring engineer will respond within one business day',
 
   /* Footer */
-  'footer.contact': 'Phone: 031-697-2700 | Email: info@atmacs.co.kr<br>\n      Unit 717 (7F), Bldg 205, Park Havio, 111 Songpa-daero, Songpa-gu, Seoul',
+  'footer.contact': 'Phone: 02-449-2310 | Email: info@atmacs.co.kr<br>\n      Unit 717 (7F), Bldg 205, Park Havio, 111 Songpa-daero, Songpa-gu, Seoul',
   'footer.cert.venture': 'Venture Co.',
   'footer.cert.safety':  'Safety Institution',
   'footer.l1.1': 'Monitoring Service',
@@ -5401,16 +5427,16 @@ const i18n_en = {
   /* Head office relocation popup */
   'move.badge':       '📢 Head Office Relocation',
   'move.title':       '<strong>ATMACS</strong> Is Relocating Its Head Office',
-  'move.sub':         'To provide a better working environment, our head office will relocate to the address below effective Friday, July 25, 2026. Please note this for future visits.',
+  'move.sub':         'To provide a better working environment, our head office will relocate to the address below effective Saturday, July 25, 2026. Please note this for future visits.',
   'move.date.lbl':    'Move Date',
-  'move.date.val':    'Friday, July 25, 2026',
+  'move.date.val':    'Saturday, July 25, 2026',
   'move.addr.lbl':    'New Address',
   'move.addr.val':    'Unit 717 (7F), Bldg 205, Park Havio, 111 Songpa-daero, Songpa-gu, Seoul',
   'move.transit.lbl': 'Transit',
   'move.transit.val': 'Near Munjeong Stn., Seoul Subway Line 8',
   'move.contact.lbl': 'Contact',
-  'move.contact.val': 'Tel 031-697-2700 · info@atmacs.co.kr',
-  'move.note':        '※ The main phone number will remain unchanged for the time being; any change will be announced separately. Our email address will not change.',
+  'move.contact.val': 'Tel 02-449-2310 · info@atmacs.co.kr',
+  'move.note':        '※ The main phone number has changed to the new number (02-449-2310). Our email address will not change.',
   'move.maps':        '🗺️ View New Location on Map',
   'perf.stat.bar': `<div><div class="psb-num">20+</div><div class="psb-lbl">Years in Business</div></div>
       <div><div class="psb-num">1,000+</div><div class="psb-lbl">Projects Completed</div></div>
@@ -5896,7 +5922,7 @@ function handleSubmit(e) {
     alert(_currentLang === 'ko' ? '필수 항목을 입력해 주세요.' : 'Please fill in all required fields.');
     return;
   }
-  var btn = form.querySelector('.c-submit');
+  var btn = form.querySelector('.btn-sub');
   if (btn) { btn.disabled = true; btn.textContent = _currentLang === 'ko' ? '전송 중…' : 'Sending…'; }
   setTimeout(function() {
     alert(_currentLang === 'ko'
@@ -6633,11 +6659,11 @@ function toggleTrans(btn_arg) {
     <button class="welcome-close" onclick="closeMove('once')" aria-label="닫기">✕</button>
     <span class="welcome-badge" data-i18n="move.badge">📢 본사 이전 안내</span>
     <h2 class="welcome-title" id="moveTitle" data-i18n="move.title"><strong>㈜에이티맥스</strong>가 본사를 이전합니다</h2>
-    <p class="welcome-sub" data-i18n="move.sub">보다 나은 업무 환경 조성을 위해 2026년 7월 25일(금)부로 본사를 아래 주소로 이전합니다. 방문 시 참고 부탁드립니다.</p>
+    <p class="welcome-sub" data-i18n="move.sub">보다 나은 업무 환경 조성을 위해 2026년 7월 25일(토)부로 본사를 아래 주소로 이전합니다. 방문 시 참고 부탁드립니다.</p>
     <div class="welcome-cert-card">
       <div class="welcome-cert-row">
         <div class="welcome-cert-lbl" data-i18n="move.date.lbl">이전일</div>
-        <div class="welcome-cert-val" data-i18n="move.date.val">2026년 7월 25일 (금)</div>
+        <div class="welcome-cert-val" data-i18n="move.date.val">2026년 7월 25일 (토)</div>
       </div>
       <div class="welcome-cert-row">
         <div class="welcome-cert-lbl" data-i18n="move.addr.lbl">신 주소</div>
@@ -6649,10 +6675,10 @@ function toggleTrans(btn_arg) {
       </div>
       <div class="welcome-cert-row">
         <div class="welcome-cert-lbl" data-i18n="move.contact.lbl">연락처</div>
-        <div class="welcome-cert-val" data-i18n="move.contact.val">대표전화 031-697-2700 · info@atmacs.co.kr</div>
+        <div class="welcome-cert-val" data-i18n="move.contact.val">대표전화 02-449-2310 · info@atmacs.co.kr</div>
       </div>
     </div>
-    <p class="welcome-move-note" data-i18n="move.note">※ 대표전화는 당분간 기존 번호(031-697-2700)를 유지하며, 번호 변경 시 별도 안내드리겠습니다. 이메일 주소는 변경되지 않습니다.</p>
+    <p class="welcome-move-note" data-i18n="move.note">※ 대표전화가 신규 번호(02-449-2310)로 변경되었습니다. 이메일 주소는 변경되지 않습니다.</p>
     <a class="welcome-pdf-btn" href="https://maps.google.com/maps?q=서울특별시+송파구+송파대로+111" target="_blank" rel="noopener" data-i18n="move.maps">🗺️ 새 위치 지도 보기</a>
     <div class="welcome-actions">
       <button class="welcome-dismiss" onclick="closeMove('day')" data-i18n="welcome.dismiss.day">오늘 하루 보지 않기</button>
